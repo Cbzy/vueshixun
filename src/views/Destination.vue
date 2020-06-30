@@ -1,6 +1,7 @@
 <template>
   <div class="Destination">
-    <div class="place-focus"><!-- 头部 -->
+    <div class="shade">
+      <div class="place-focus"><!-- 头部 -->
       <a href="#" class="show-info-top">
         <div class="show-info-top">
           <div class="info-left">
@@ -30,7 +31,7 @@
       </a>
       <a href="#des-content" class="show-info-bottom">
         <div class="show-info-bottom">
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          <i class="chevron-down"></i>
         </div>
       </a>
       <div class="show-ft">
@@ -48,17 +49,26 @@
         </div>
       </div>
     </div>
+    </div>
+
 <!--
     热门目的地(主要内容)
  -->
     <section id="des-content">
-      <div class="row-hot">
+      <div class="row-hot" v-for="(item,index) in itemList" :keys="index">
         <h2>热门目的地</h2>
         <div class="r-title">
-
+          <p class="on">{{item.State}}</p>
         </div>
         <div class="r-navbar">
-
+			<dl v-for="(pItem,pIindex) in item.Country" :keys="index">
+				<dt :style="{textDecoration:(pItem.Province=='直辖市'?'none':'underline')}">
+					{{pItem.Province}}
+				</dt>
+				<dd>
+					<a href="#" v-for="(cItem,cIindex) in pItem.pvc">{{cItem.city}}</a>
+				</dd>
+			</dl>
         </div>
       </div>
     </section>
@@ -66,11 +76,26 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: 'Destination',
   data(){
     return{
-      infoData:'关于泰国普吉岛，这个多面风情的岛屿，常年位于境外旅游热搜榜前列，第一次去的人，容易被它的热带海岛风情和高性价比吸引到想再二刷；第N次去的人，更是因为每次都能发现普吉的新玩法，让人想再多宠幸一遍。'
+      infoData:'关于泰国普吉岛，这个多面风情的岛屿，常年位于境外旅游热搜榜前列，第一次去的人，容易被它的热带海岛风情和高性价比吸引到想再二刷；第N次去的人，更是因为每次都能发现普吉的新玩法，让人想再多宠幸一遍。',
+      itemList: [],
+    }
+  },
+  mounted() {
+    this.getData();
+  },
+  methods: {
+    getData() {
+      axios.get('../../static/data.json').then(response => {
+        this.itemList = response.data;
+      }, response => {
+        console.log("error");
+      });
     }
   }
 }

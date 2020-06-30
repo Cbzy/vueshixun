@@ -23,9 +23,14 @@ body{
 }
 
 div.Destination{
-  /* position: relative; */
+  position: absolute;
+  top: 0;
   width: 100%;
   min-width: 1260px;
+}
+div.shade{
+  position: relative;
+  height: 34.375rem;
 }
 div.place-focus{
   width: 100%;
@@ -165,8 +170,11 @@ div.place-focus a.show-info-bottom{
 
   }
   div.show-info-bottom i{
-    color: white;
-    font: 20px/1 '微软雅黑';
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    background: url('../assets/place-sprites3.png') no-repeat -30px -60px;
+    margin: 24px 0;
   }
 div.place-focus div.show-ft{
   position: absolute;
@@ -251,11 +259,10 @@ div.show-ft div{
   }
   div.pic-share a{
     display: block;
-    /* color: white;
-    font: 20px/1 '微软雅黑'; */
+    color: white;
+    font: 12px/23px '微软雅黑';
     border: 1px solid white;
     border-radius: 4px;
-    line-height:23px;
     padding: 0 14px;
     text-align: center;
   }
@@ -270,3 +277,71 @@ div.show-ft div{
     background: url(../assets/place-sprites3.png) no-repeat 0 -30px;
     vertical-align: middle;
   }
+
+
+
+section#des-content{
+	width: 100%;
+}
+section#des-content div.row-hot{
+	width: 62.5rem;
+	margin: 0 auto;
+}
+div.row-hot h2{
+	font: 30px/1 '微软雅黑';
+	padding: 40px 0 25px;
+}
+div.row-hot div.r-title{
+	margin: 0 0 30px;
+}
+	div.r-title p{
+		display: inline-block;
+		padding: 10px 0;
+		font: 18px/22px '微软雅黑';
+		color: #333333;
+		margin: 0 12px;
+		text-align: center;
+	}
+	div.r-title p.on{
+		color: #FF9D00;
+		border-bottom: 3px solid #FF9D00;
+	}
+div.row-hot div.r-navbar{
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+	div.r-navbar dl{
+		border-bottom: 1px dashed #eee;
+		padding: 20px 0 20px 100px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	div.r-navbar dt{
+	    font-size: 16px;
+	    color: #333;
+	    margin-left: -100px;
+		white-space: nowrap;
+		margin-right: 1.25rem;
+		text-decoration: underline;
+	}
+	div.r-navbar dd{
+		width: 23.125rem;
+		white-space: inherit;
+		text-align: left;
+	}
+	div.r-navbar dd a{
+		margin-right: 10px;
+		color: #666;
+		white-space: nowrap;	
+	}
+	div.r-navbar dd a:hover{
+		color: #FF9D00;
+		text-decoration: underline;
+	}

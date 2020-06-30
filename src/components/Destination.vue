@@ -28,40 +28,15 @@
           </div>
         </div>
       </a>
-      <a href="#des-content" class="show-info-bottom">
-        <div class="show-info-bottom">
-          <i class="chevron-down"></i>
-        </div>
-      </a>
-      <div class="show-ft">
-        <div class="pic-from">
-          <div class="pic-from-pop">
-            <div>灰姑娘 的作品<span></span></div>
-          </div>
-          <i></i>
-        </div>
-        <div class="pic-time">
-          <a href="#" class="show-icon-calendar" title="过目不忘">30</a>
-        </div>
-        <div class="pic-share">
-          <a href="#"><i></i>分享</a>
-        </div>
-      </div>
+	  <a href="#" class="show-info-bottom">
+		  <div class="show-info-bottom">
+        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+		  </div>
+	  </a>
+	  <div class="">
+
+	  </div>
     </div>
-<!--
-    热门目的地(主要内容)
- -->
-    <section id="des-content">
-		<div class="row-hot">
-			<h2>热门目的地</h2>
-			<div class="r-title">
-
-			</div>
-			<div class="r-navbar">
-
-			</div>
-		</div>
-	</section>
   </div>
 </template>
 

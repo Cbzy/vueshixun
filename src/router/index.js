@@ -17,5 +17,10 @@ export default new Router({
       name: 'Destination',
       component: Destination
     },
+    {
+      path: '/freetravel',
+      name: 'FreeTravel',
+      component: FreeTravel
+    },
   ]
 })

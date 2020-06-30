@@ -44,9 +44,6 @@ div.place-focus{
 div.place-focus a.show-info-top{
 
 }
-div.place-focus a.show-info-top{
-
-}
 div.show-info-top{
   display: flex;
   flex-direction: row;
@@ -170,4 +167,106 @@ div.place-focus a.show-info-bottom{
   div.show-info-bottom i{
     color: white;
     font: 20px/1 '微软雅黑';
+  }
+div.place-focus div.show-ft{
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+div.show-ft div{
+  padding: 0 8px;
+}
+  div.pic-from{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  div.pic-from:hover div.pic-from-pop{
+    width: 95px;
+    transform: translateX(-95px);
+    visibility: initial;
+    color: #333333;
+  }
+  div.pic-from i{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url(../assets/place-sprites3.png) no-repeat 0 0;
+    overflow: hidden;
+  }
+    div.pic-from-pop{
+    position: absolute;
+    left: -10px;
+    z-index: -200;
+    width: 0;
+    /* padding: 0; */
+    color: transparent;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all .5s;
+  }
+  div.pic-from-pop div{
+    height: 25px;
+    padding: 0;
+    border-radius: 5px;
+    background-color: white;
+    position: relative;
+    font: 12px/25px '微软雅黑';
+    white-space: nowrap;
+  }
+  div.pic-from span{
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    border: 5px solid white;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    z-index: -200;
+  }
+  div.pic-time{
+
+  }
+  div.pic-time a{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    font: 12px/32px '微软雅黑';
+    text-align: center;
+    background: url(../assets/place-sprites3.png) no-repeat -60px 0;
+    overflow: hidden;
+  }
+  div.pic-time a:hover{
+    text-decoration: underline;
+  }
+  div.pic-share{
+
+  }
+  div.pic-share a{
+    display: block;
+    /* color: white;
+    font: 20px/1 '微软雅黑'; */
+    border: 1px solid white;
+    border-radius: 4px;
+    line-height:23px;
+    padding: 0 14px;
+    text-align: center;
+  }
+  div.pic-share a:hover{
+    text-decoration: underline;
+  }
+  div.pic-share i{
+    display: inline-block;
+    width: 13px;
+    height: 14px;
+    margin-right: 5px;
+    background: url(../assets/place-sprites3.png) no-repeat 0 -30px;
+    vertical-align: middle;
   }

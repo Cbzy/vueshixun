@@ -2,53 +2,60 @@
   <div class="Destination">
     <div class="shade">
       <div class="place-focus"><!-- 头部 -->
-      <a href="#" class="show-info-top">
-        <div class="show-info-top">
-          <div class="info-left">
-            <p>Don't fear the unknown</p>
-            <div class="ilDiv">
-              <input type="search" placeholder="我想去">
-              <a href="#">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </a>
+        <a href="#" class="show-info-top">
+          <div class="show-info-top">
+            <div class="info-left">
+              <p>Don't fear the unknown</p>
+              <div class="ilDiv">
+                <input type="search" placeholder="我想去">
+                <a href="#" class="search">
+                  <i></i>
+                </a>
+              </div>
+              <ul>
+                <li><a href="#">成都</a></li>
+                <li><a href="#">婺源</a></li>
+                <li><a href="#">厦门</a></li>
+                <li><a href="#">青岛</a></li>
+                <li><a href="#">巴厘岛</a></li>
+              </ul>
             </div>
-            <ul>
-              <li><a href="#">成都</a></li>
-              <li><a href="#">婺源</a></li>
-              <li><a href="#">厦门</a></li>
-              <li><a href="#">青岛</a></li>
-              <li><a href="#">巴厘岛</a></li>
-            </ul>
+            <div class="info-right">
+              <a href="#" class="irTitle">
+                <h2>神仙海岛的三款热门玩法，去普吉一定不能错过</h2>
+              </a>
+              <p>{{infoData}}</p>
+              <a href="#" class="readAll">阅读全文</a>
+            </div>
           </div>
-          <div class="info-right">
-            <a href="#" class="irTitle">
-              <h2>神仙海岛的三款热门玩法，去普吉一定不能错过</h2>
+        </a>
+        <a href="#des-content" class="show-info-bottom">
+          <div class="show-info-bottom">
+            <i class="chevron-down"></i>
+          </div>
+        </a>
+        <div class="show-ft">
+          <div class="pic-from">
+            <div class="pic-from-pop">
+              <div>灰姑娘 的作品<span></span></div>
+            </div>
+            <i></i>
+          </div>
+          <div class="pic-time">
+            <a href="#" class="show-icon-calendar" title="过目不忘">30</a>
+          </div>
+          <div class="pic-share">
+            <a href="#" class="btn-share">
+              <i></i>分享
             </a>
-            <p>{{infoData}}</p>
-            <a href="#" class="readAll">阅读全文</a>
+            <div class="pop-share">
+              <a href="#"><i></i></a>
+              <a href="#"><i></i></a>
+              <a href="#"><i></i></a>
+            </div>
           </div>
-        </div>
-      </a>
-      <a href="#des-content" class="show-info-bottom">
-        <div class="show-info-bottom">
-          <i class="chevron-down"></i>
-        </div>
-      </a>
-      <div class="show-ft">
-        <div class="pic-from">
-          <div class="pic-from-pop">
-            <div>灰姑娘 的作品<span></span></div>
-          </div>
-          <i></i>
-        </div>
-        <div class="pic-time">
-          <a href="#" class="show-icon-calendar" title="过目不忘">30</a>
-        </div>
-        <div class="pic-share">
-          <a href="#"><i></i>分享</a>
         </div>
       </div>
-    </div>
     </div>
 
 <!--
@@ -61,14 +68,14 @@
           <p class="on">{{item.State}}</p>
         </div>
         <div class="r-navbar">
-			<dl v-for="(pItem,pIindex) in item.Country" :keys="index">
-				<dt :style="{textDecoration:(pItem.Province=='直辖市'?'none':'underline')}">
-					{{pItem.Province}}
-				</dt>
-				<dd>
-					<a href="#" v-for="(cItem,cIindex) in pItem.pvc">{{cItem.city}}</a>
-				</dd>
-			</dl>
+          <dl v-for="(pItem,pIindex) in item.Country" :keys="index">
+            <dt :style="{textDecoration:(pItem.Province=='直辖市'?'none':'underline')}">
+              {{pItem.Province}}
+            </dt>
+            <dd>
+              <a href="#" v-for="(cItem,cIindex) in pItem.pvc">{{cItem.city}}</a>
+            </dd>
+          </dl>
         </div>
       </div>
     </section>

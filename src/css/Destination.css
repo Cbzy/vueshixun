@@ -29,8 +29,8 @@ div.Destination{
   min-width: 1260px;
 }
 div.shade{
-  position: relative;
-  height: 34.375rem;
+  /* position: relative; */
+  /* height: 34.375rem; */
 }
 div.place-focus{
   width: 100%;
@@ -39,12 +39,13 @@ div.place-focus{
   background: url('https://b1-q.mafengwo.net/s15/M00/0F/5F/CoUBGV28HDuALpzxABR490kDN0M39.jpeg');
   background-repeat: no-repeat;
   background-size: 100%;
-  position: absolute;
-  top: 0;
+  position: relative;
+  /* position: absolute; */
+  /* top: 0;
   left: 0;
-  right: 0;
+  right: 0; */
   padding-top: 100px;
-  z-index: -100;
+  /* z-index: -100; */
 }
 div.place-focus a.show-info-top{
 
@@ -81,7 +82,7 @@ div.show-info-top{
     div.info-left input{
       font: 20px/1 "微软雅黑";
       width: 308px;
-      height: 46px;
+      height: 2.25rem;
       /* margin: 0 6px 0 0; */
       padding: 0 20px;
       background-color: #fff;
@@ -91,22 +92,24 @@ div.show-info-top{
       color: #111;
       border-radius: 4px;
       border: none;
-      vertical-align:middle;
+      vertical-align:top;
     }
-    div.info-left a{
+    div.info-left a.search{
       display: inline-block;
-      width: 45px;
-      height: 46px;
-      vertical-align:middle;
-    }
-    div.info-left i{
-      display: block;
-      background-color: #ff9d00;
+      width: 2.25rem;
+      height: 2.25rem;
+	  background-color: #ff9d00;
       border-radius: 4px;
+	  text-align: center;
+	  line-height: 2.25rem;
+    }
+    div.info-left a.search i{
+      display: inline-block;
+      width: 24px;
+      height: 24px;
       text-align: center;
-      color: white;
-      line-height: 46px;
-      font-size: 25px;
+	  background: url('../assets/header-sprites.png') no-repeat 0 -110px;
+	  vertical-align: middle;
     }
     div.info-left ul{
       margin-top: 15px;
@@ -210,9 +213,7 @@ div.show-ft div{
     div.pic-from-pop{
     position: absolute;
     left: -10px;
-    z-index: -200;
     width: 0;
-    /* padding: 0; */
     color: transparent;
     overflow: hidden;
     visibility: hidden;
@@ -257,7 +258,7 @@ div.show-ft div{
   div.pic-share{
 
   }
-  div.pic-share a{
+  div.pic-share a.btn-share{
     display: block;
     color: white;
     font: 12px/23px '微软雅黑';
@@ -266,10 +267,13 @@ div.show-ft div{
     padding: 0 14px;
     text-align: center;
   }
-  div.pic-share a:hover{
+  div.pic-share a.btn-share:hover{
     text-decoration: underline;
   }
-  div.pic-share i{
+  div.pic-share a.btn-share:hover + div.pop-share{
+    display: flex;
+  }
+  div.pic-share a.btn-share i{
     display: inline-block;
     width: 13px;
     height: 14px;
@@ -277,11 +281,63 @@ div.show-ft div{
     background: url(../assets/place-sprites3.png) no-repeat 0 -30px;
     vertical-align: middle;
   }
+  div.pic-share div.pop-share{
+	position: absolute;
+	right: 0;
+	bottom: 35px;
+	width: 132px;
+	height: 36px;
+	padding: 8px 10px;
+	background-color: #fff;
+	border-radius: 6px;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+	display: none;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+  }
+	div.pop-share a{
+		width: 36px;
+		height: 36px;
+		border-radius: 5px;
+		margin-right: 12px;
+		text-align: center;
+  }
+  div.pop-share a:nth-of-type(1){
+    background-color: #d84c4c;
+  }
+  div.pop-share a:nth-of-type(2){
+    background-color: #3f8bc0;
+  }
+  div.pop-share a:nth-of-type(3){
+    background-color: #73a64f;
+  }
+	div.pop-share a:nth-last-child(1){
+		margin: 0;
+	}
+	div.pop-share i{
+		display: inline-block;
+		text-align: center;
+		margin-top: 8px;
+		width: 26px;
+		height: 22px;
+		vertical-align: top;
+	}
+	div.pop-share a:nth-of-type(1) i{
+		background: url('../assets/place-sprites3.png') no-repeat 0 -90px;
+	}
+	div.pop-share a:nth-of-type(2) i{
+    background: url('../assets/place-sprites3.png') no-repeat -30px -90px;
+	}
+	div.pop-share a:nth-of-type(3) i{
+    background: url('../assets/place-sprites3.png') no-repeat -60px -90px;
+	}
 
 
 
 section#des-content{
-	width: 100%;
+  width: 100%;
+  /* margin-top: 34.375rem; */
 }
 section#des-content div.row-hot{
 	width: 62.5rem;
@@ -324,9 +380,9 @@ div.row-hot div.r-navbar{
 		flex-wrap: wrap;
 	}
 	div.r-navbar dt{
-	    font-size: 16px;
-	    color: #333;
-	    margin-left: -100px;
+    font-size: 16px;
+    color: #333;
+    margin-left: -100px;
 		white-space: nowrap;
 		margin-right: 1.25rem;
 		text-decoration: underline;
@@ -339,7 +395,7 @@ div.row-hot div.r-navbar{
 	div.r-navbar dd a{
 		margin-right: 10px;
 		color: #666;
-		white-space: nowrap;	
+		white-space: nowrap;
 	}
 	div.r-navbar dd a:hover{
 		color: #FF9D00;

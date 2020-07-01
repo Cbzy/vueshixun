@@ -59,67 +59,34 @@
     </div>
 
 <!--
-    热门目的地
+    热门目的地(主要内容)
  -->
     <section id="des-content" class="content">
       <div class="row-hot">
         <h2>热门目的地</h2>
-		<div>
-			<div class="r-navbar">
-			  <div class="rn" v-for="(item,index) in itemList" :keys="index">
-				  <p :class="{on:index==mouseOn}" v-on:mouseenter="changActive(index)">{{item.State}}</p>
-				  <span>|</span>
-			  </div>
-			</div>
-			<div class="r-content" v-for="(item,index) in itemList" :keys="index">
-			  <dl v-for="(pItem,pIindex) in item.Country" :keys="index" v-if="item.Id===mouseOn + 1">
-			    <dt v-if="pItem.Province=='直辖市'" :style="{textDecoration:(pItem.Province=='直辖市'?'none':'underline')}">
-			      {{pItem.Province}}
-			    </dt>
-          <dt v-else>
-			      <a href="#">{{pItem.Province}}</a>
-			    </dt>
-			    <dd>
-			      <a href="#" v-for="(cItem,cIindex) in pItem.pvc">{{cItem.city}}</a>
-			    </dd>
-			  </dl>
-			</div>
-		</div>
-
+        <div>
+          <div class="r-navbar">
+            <div class="rn" v-for="(item,index) in itemList" :keys="index">
+              <p :class="{on:index==mouseOn}" v-on:mouseenter="changActive(index)">{{item.State}}</p>
+              <span>|</span>
+            </div>
+          </div>
+          <div class="r-content" v-for="(item,index) in itemList" :keys="index">
+            <dl v-for="(pItem,pIindex) in item.Country" :keys="index" v-if="item.Id===mouseOn + 1">
+              <dt v-if="pItem.Province=='直辖市'" :style="{textDecoration:(pItem.Province=='直辖市'?'none':'underline')}">
+                {{pItem.Province}}
+              </dt>
+              <dt v-else>
+                <a href="#">{{pItem.Province}}</a>
+              </dt>
+              <dd>
+                <a href="#" v-for="(cItem,cIindex) in pItem.pvc">{{cItem.city}}</a>
+              </dd>
+            </dl>
+          </div>
+		    </div>
       </div>
     </section>
-	
-	<!--
-	    当季推荐
-	 -->
-	    <section class="content">
-	      <div class="row-season">
-	        <h2>当季推荐</h2>
-			<div>
-				<div class="r-navbar">
-				  <div class="rn" v-for="(item,index) in itemList" :keys="index">
-					  <p :class="{on:index==mouseOn}" v-on:mouseenter="changActive(index)">{{item.State}}</p>
-					  <span>|</span>
-				  </div>
-				</div>
-				<div class="r-content" v-for="(item,index) in itemList" :keys="index">
-				  <dl v-for="(pItem,pIindex) in item.Country" :keys="index" v-if="item.Id===mouseOn + 1">
-				    <dt v-if="pItem.Province=='直辖市'" :style="{textDecoration:(pItem.Province=='直辖市'?'none':'underline')}">
-				      {{pItem.Province}}
-				    </dt>
-	          <dt v-else>
-				      <a href="#">{{pItem.Province}}</a>
-				    </dt>
-				    <dd>
-				      <a href="#" v-for="(cItem,cIindex) in pItem.pvc">{{cItem.city}}</a>
-				    </dd>
-				  </dl>
-				</div>
-			</div>
-	
-	      </div>
-	    </section>
-	
   </div>
 </template>
 
@@ -132,7 +99,7 @@ export default {
     return{
       infoData:'关于泰国普吉岛，这个多面风情的岛屿，常年位于境外旅游热搜榜前列，第一次去的人，容易被它的热带海岛风情和高性价比吸引到想再二刷；第N次去的人，更是因为每次都能发现普吉的新玩法，让人想再多宠幸一遍。',
       itemList: [],
-	  mouseOn: 0,
+	    mouseOn: 0,
 
     }
   },

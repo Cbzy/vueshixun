@@ -98,17 +98,17 @@ div.show-info-top{
       display: inline-block;
       width: 2.25rem;
       height: 2.25rem;
-	    background-color: #ff9d00;
+	  background-color: #ff9d00;
       border-radius: 4px;
-      text-align: center;
-      line-height: 2.25rem;
+	  text-align: center;
+	  line-height: 2.25rem;
     }
     div.info-left a.search i{
       display: inline-block;
       width: 24px;
       height: 24px;
       text-align: center;
-      background: url('../assets/header-sprites.png') no-repeat 0 -110px;
+      background: url('../assets/Destination/header-sprites.png') no-repeat 0 -110px;
       vertical-align: middle;
     }
     div.info-left ul{
@@ -176,7 +176,7 @@ div.place-focus a.show-info-bottom{
     display: inline-block;
     width: 36px;
     height: 20px;
-    background: url('../assets/place-sprites3.png') no-repeat -30px -60px;
+    background: url('../assets/Destination/place-sprites3.png') no-repeat -30px -60px;
     margin: 24px 0;
   }
 div.place-focus div.show-ft{
@@ -207,7 +207,7 @@ div.show-ft div{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url(../assets/place-sprites3.png) no-repeat 0 0;
+    background: url('../assets/Destination/place-sprites3.png') no-repeat 0 0;
     overflow: hidden;
   }
     div.pic-from-pop{
@@ -249,7 +249,7 @@ div.show-ft div{
     color: #fff;
     font: 12px/32px '微软雅黑';
     text-align: center;
-    background: url(../assets/place-sprites3.png) no-repeat -60px 0;
+    background: url('../assets/Destination/place-sprites3.png') no-repeat -60px 0;
     overflow: hidden;
   }
   div.pic-time a:hover{
@@ -278,7 +278,7 @@ div.show-ft div{
     width: 13px;
     height: 14px;
     margin-right: 5px;
-    background: url(../assets/place-sprites3.png) no-repeat 0 -30px;
+    background: url('../assets/Destination/place-sprites3.png') no-repeat 0 -30px;
     vertical-align: middle;
   }
   div.pic-share div.pop-share{
@@ -324,13 +324,13 @@ div.show-ft div{
 		vertical-align: top;
 	}
 	div.pop-share a:nth-of-type(1) i{
-		background: url('../assets/place-sprites3.png') no-repeat 0 -90px;
+		background: url('../assets/Destination/place-sprites3.png') no-repeat 0 -90px;
 	}
 	div.pop-share a:nth-of-type(2) i{
-    background: url('../assets/place-sprites3.png') no-repeat -30px -90px;
+    background: url('../assets/Destination/place-sprites3.png') no-repeat -30px -90px;
 	}
 	div.pop-share a:nth-of-type(3) i{
-    background: url('../assets/place-sprites3.png') no-repeat -60px -90px;
+    background: url('../assets/Destination/place-sprites3.png') no-repeat -60px -90px;
 	}
 
 
@@ -360,24 +360,22 @@ div.row-hot div.r-navbar{
 		/* margin: 0 10px; */
 	}
 	div.r-navbar p{
-		position: relative;
-		display: inline-block;
 		padding: 10px 0;
 		font: 18px/22px '微软雅黑';
 		color: #333333;
-		text-align: center;
-		margin: 0 22px;
+    text-align: center;
+    margin: 0 22px;
 	}
 	div.r-navbar span{
-		display: inline-block;
+    display: inline-block;
 		color: #EEEEEE;
 		width: 1px;
 		height: 15px;
-		background-color: #EEEEEE;
+    background-color: #EEEEEE;
 	}
-	/* div.r-navbar span:nth-last-child(1){
+	div.r-navbar span:nth-last-child(1){
 		display: none;
-	} */
+	}
 	div.r-navbar p.on{
 		color: #FF9D00;
 		border-bottom: 3px solid #FF9D00;

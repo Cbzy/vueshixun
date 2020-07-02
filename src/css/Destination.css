@@ -23,8 +23,10 @@ body{
 }
 
 div.Destination{
-  position: absolute;
+  /* position: absolute; */
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   min-width: 1260px;
 }
@@ -170,14 +172,14 @@ div.place-focus a.show-info-bottom{
   display: block;
 }
   div.show-info-bottom{
-
+	text-align: center;
   }
   div.show-info-bottom i{
     display: inline-block;
     width: 36px;
     height: 20px;
     background: url('../assets/Destination/place-sprites3.png') no-repeat -30px -60px;
-    margin: 24px 0;
+    margin: 24px auto;
   }
 div.place-focus div.show-ft{
   position: absolute;
@@ -341,15 +343,19 @@ section.content{
   border-bottom: 1px solid #e4e4e4;
   padding-bottom: 40px;
 }
-section#des-content div.row-hot{
-	width: 62.5rem;
-	margin: 0 auto;
+section.content div.row{
+  width: 63.75rem;
+  margin: 0 auto;
 }
-div.row-hot h2{
+div.row-hot{
+  width: 62.5rem;
+}
+section.content h2{
+	text-align: center;
 	font: 30px/1 '微软雅黑';
 	padding: 40px 0 25px;
 }
-div.row-hot div.r-navbar{
+section.content div.r-navbar{
 	margin: 0 0 30px;
 	display: flex;
 	flex-direction: row;
@@ -357,7 +363,8 @@ div.row-hot div.r-navbar{
 	justify-content: center;
 }
 	div.r-navbar div.rn{
-		/* margin: 0 10px; */
+    /* margin: 0 10px; */
+    position: relative;
 	}
 	div.r-navbar p{
 		padding: 10px 0;
@@ -367,19 +374,27 @@ div.row-hot div.r-navbar{
     margin: 0 22px;
 	}
 	div.r-navbar span{
+    position: absolute;
+    top: 10px;
+    right: 0;
     display: inline-block;
-		color: #EEEEEE;
+		color: #EEE;
 		width: 1px;
 		height: 15px;
-    background-color: #EEEEEE;
 	}
-	div.r-navbar span:nth-last-child(1){
+	div.r-navbar div.rn:nth-last-child(1) span{
 		display: none;
 	}
-	div.r-navbar p.on{
+	section.content p.on{
 		color: #FF9D00;
 		border-bottom: 3px solid #FF9D00;
 	}
+
+/* 热门目的地 */
+
+div.row-hot{
+
+}
 div.row-hot div.r-content{
 	width: 100%;
 	margin: 0 auto;
@@ -404,6 +419,9 @@ div.row-hot div.r-content{
 		white-space: nowrap;
 		margin-right: 1.25rem;
 		text-decoration: underline;
+  }
+  div.r-content dt a:hover{
+    color: #ff9d00;
 	}
 	div.r-content dd{
 		width: 23.125rem;
@@ -418,4 +436,149 @@ div.row-hot div.r-content{
 	div.r-content dd a:hover{
 		color: #FF9D00;
 		text-decoration: underline;
+	}
+
+/* 当季推荐 */
+
+div.row-season{
+
+}
+div.row-season div.r-content{
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content:start;
+	flex-wrap: wrap;
+}
+div.row-season div.tiles{
+
+}
+div.tiles div.item{
+  height: 13.75rem;
+}
+	div.item a{
+		position: relative;
+		display: block;
+		margin: 10px 15px 10px 0;
+		overflow: hidden;
+	}
+	div.col3 img{
+		display: block;
+		width: 20.1875rem;
+		height: 13.75rem;
+
+	}
+	div.col6 img{
+		display: block;
+		width: 14.875rem;
+		height: 13.75rem;
+  }
+  div.col7{
+    position: relative;
+    z-index: 3000;
+  }
+  div.col7 a{
+
+  }
+  div.col7 img{
+		display: block;
+		width: 14.875rem;
+    height: 13.75rem;
+  }
+  div.col7 div.more{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 14.875rem;
+    background-color: rgba(0,0,0,.5);
+    z-index: 300;
+    color: white;
+    text-align: center;
+    font: 20px/220px '微软雅黑';
+  }
+  div.col7 div.more span{
+
+  }
+  div.col7 div.more i{
+    display: inline-block;
+    margin-left: 5px;
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(-45deg);
+    vertical-align: 1px;
+    vertical-align: middle;
+  }
+	div.item div.title{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 0 1.25rem;
+		z-index: 100;
+		color: white;
+		font: 20px/56px '微软雅黑';
+		white-space: nowrap;
+		overflow: hidden;
+		background: linear-gradient(to bottom,rgba(0,0,0,0) 10px,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0.5) 100%);
+	}
+
+/* 主题推荐 */
+
+div.row-theme{
+
+}
+div.row-theme div.r-content{
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content:start;
+	flex-wrap: wrap;
+}
+div.row-theme div.item{
+	position: relative;
+	height: 13.75rem;
+}
+	div.row-theme div.item a{
+		/* display: inline-block; */
+	}
+	div.row-theme div.item img{
+		display: block;
+		width: 14.875rem;
+		height: 13.75rem;
+	}
+
+/* 全球目的地 */
+
+div.row-global{
+
+}
+div.row-global div.hd{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+	div.hd h2{
+		
+	}
+	div.hd h2 span{
+		font-size: 14px;
+		color: #a8a8a8;
+	}
+	div.hd h2 a{
+		display: inline-block;
+		margin-left: 10px;
+		font-size: 14px;
+		color: #ff9d00;
+	}
+	div.hd h2 a strong{
+		font-weight: bold;
+		font-style: normal;
+		font-size: 18px;
 	}

@@ -1,16 +1,22 @@
 <template>
     <div>
-        <SelectM></SelectM>
-
+        <div class="select">
+            <div class="logo logo2"></div><a >自由行</a>
+            <div class="search-panel">
+                <div class="trigger">
+                    <span>天津</span>出发
+                </div>
+                <div class="go go2"></div>
+                <input type=text placeholder="请输入目的地/产品名称"  style="width:404px;margin-left:6px;outline: none;border:none;border-radius: 2px;font-size:16px;padding-left:5px; ">
+                <div class="found"></div>
+            </div>
+        </div>
         
     </div>
 </template>
 <script>
-import SelectM from "@/components/travel/select"
 export default {
-    components:{
-        SelectM: SelectM
-    }
+    name: 'Select'
 }
 </script>
 <style scoped>

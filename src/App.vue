@@ -236,7 +236,7 @@ export default {
   }
 }
 </script>
-<style>
+<style >
 
 
   @import url('./css/home.css');

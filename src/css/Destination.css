@@ -609,14 +609,31 @@ div.bd div.item{
 	}
 		div.clearfix ul{
 			width: 100%;
-			max-height: 28.125rem;
 			display: flex;
 			flex-direction: column;
 			align-content: space-between;
 			justify-content: space-between;
 			flex-wrap: wrap;
-			/* overflow: hidden; */
-		}
+			overflow: hidden;
+    }
+    div.item:nth-of-type(1) ul{
+		height: 490px;
+	}
+	div.item:nth-of-type(2) ul{
+		height: 210px;
+	}
+	div.item:nth-of-type(3) ul{
+		height: 120px;
+	}
+	div.item:nth-of-type(4) ul{
+		height: 480px;
+	}
+	div.item:nth-of-type(5) ul{
+		height: 630px;
+	}
+	div.item:nth-of-type(6) ul{
+		height: 180px;
+	}
 		div.clearfix ul li{
 			width: 33.33%;
 			display: flex;
@@ -637,10 +654,12 @@ div.bd div.item{
 		}
 			div.cfLiDiv a{
 				text-align: left;
-				white-space: nowrap;
 				margin: 0;
 				/* margin-bottom: 16px; */
 				font: 14px/30px '微软雅黑';
+			}
+			div.cfLiDiv a:hover{
+				text-decoration: underline;
 			}
 			div.cfLiDiv a span.englishName{
 				color: #A8A8A8;
@@ -650,6 +669,8 @@ div.bd div.item{
 				width: 32px;
 				height: 14px;
 				vertical-align: middle;
+				margin-left: 5px;
+				margin-top: -3px;
 				background: url(../assets/Destination/plaInd-sprite3.png)no-repeat -555px 0;
 			}
 			div.cfLiDiv a a.icon-texas{
@@ -670,4 +691,4 @@ div.bd div.item{
 				vertical-align: middle;
 				background: url(http://css.mafengwo.net/images/mdd/place/flag.jpg)no-repeat;
 			}
-			
+

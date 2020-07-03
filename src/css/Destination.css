@@ -228,6 +228,7 @@ div.show-ft div{
     background-color: white;
     position: relative;
     font: 12px/25px '微软雅黑';
+    text-align: center;
     white-space: nowrap;
   }
   div.pic-from span{

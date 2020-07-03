@@ -31,7 +31,7 @@ export default {
         width:1000px;
         height: 70px;
         margin: 0 auto;
-
+        background: url(../../assets/travel/brand-bg.jpg) no-repeat -14px -1px;
         display:flex;
         line-height:70px;
         

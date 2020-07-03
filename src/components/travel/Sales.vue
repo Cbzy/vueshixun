@@ -1,15 +1,17 @@
 <template>
     <div>
         <SelectM></SelectM>
-
+        <CategoryM></CategoryM>
         
     </div>
 </template>
 <script>
 import SelectM from "@/components/travel/select"
+import CategoryM from "@/components/travel/Category"
 export default {
     components:{
-        SelectM: SelectM
+        SelectM: SelectM,
+        CategoryM: CategoryM
     }
 }
 </script>

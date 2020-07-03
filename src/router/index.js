@@ -19,11 +19,10 @@ export default new Router({
     },
     {
       path: '/travel',
-      name: 'Travel',
       component:Travel,
       children: [
         {
-          path: '/travel/sales',
+          path: "/travel/sales",
           component: Sales
         },
         {
@@ -45,6 +44,10 @@ export default new Router({
         {
           path: '/travel/liner',
           component: Liner
+        },
+        {
+          path: "",
+          redirect:"/travel/sales"
         }
       ]
     },

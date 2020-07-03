@@ -366,14 +366,14 @@ section.content div.r-navbar{
     /* margin: 0 10px; */
     position: relative;
 	}
-	div.r-navbar p{
+	div.rn p{
 		padding: 10px 0;
 		font: 18px/22px '微软雅黑';
 		color: #333333;
     text-align: center;
     margin: 0 22px;
 	}
-	div.r-navbar span{
+	div.rn  span{
     position: absolute;
     top: 10px;
     right: 0;
@@ -382,7 +382,7 @@ section.content div.r-navbar{
 		width: 1px;
 		height: 15px;
 	}
-	div.r-navbar div.rn:nth-last-child(1) span{
+	div.rn div.rn:nth-last-child(1) span{
 		display: none;
 	}
 	section.content p.on{
@@ -565,7 +565,7 @@ div.row-global div.hd{
 	align-items: center;
 }
 	div.hd h2{
-		
+
 	}
 	div.hd h2 span{
 		font-size: 14px;
@@ -574,11 +574,100 @@ div.row-global div.hd{
 	div.hd h2 a{
 		display: inline-block;
 		margin-left: 10px;
+		color: #ff9d00;
+	}
+	div.hd h2 a span{
 		font-size: 14px;
 		color: #ff9d00;
+		margin-left: -6px;
+	}
+	div.hd h2 a span:hover{
+
+		text-decoration: underline;
 	}
 	div.hd h2 a strong{
 		font-weight: bold;
 		font-style: normal;
 		font-size: 18px;
 	}
+div.row-global div.r-navbar{
+	justify-content: flex-start;
+}
+div.row-global div.bd{
+	width: 100%;
+}
+div.bd div.item{
+	margin-bottom: 50px;
+}
+	div.item h3{
+		font-weight: normal;
+		text-align: left;
+		margin-bottom: 15px;
+	}
+	div.item div.clearfix{
+		width: 100%;
+	}
+		div.clearfix ul{
+			width: 100%;
+			max-height: 28.125rem;
+			display: flex;
+			flex-direction: column;
+			align-content: space-between;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			/* overflow: hidden; */
+		}
+		div.clearfix ul li{
+			width: 33.33%;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+		}
+		div.clearfix li h4{
+			font-weight: normal;
+			width: 30px;
+			font: 20px/30px Centaur,Times New Roman;
+			overflow: hidden;
+			text-align: left;
+		}
+		div.clearfix li div.cfLiDiv{
+			display: flex;
+			flex-direction: column;
+			align-content: flex-start;
+		}
+			div.cfLiDiv a{
+				text-align: left;
+				white-space: nowrap;
+				margin: 0;
+				/* margin-bottom: 16px; */
+				font: 14px/30px '微软雅黑';
+			}
+			div.cfLiDiv a span.englishName{
+				color: #A8A8A8;
+			}
+			div.cfLiDiv a i.icon-hot{
+				display: inline-block;
+				width: 32px;
+				height: 14px;
+				vertical-align: middle;
+				background: url(../assets/Destination/plaInd-sprite3.png)no-repeat -555px 0;
+			}
+			div.cfLiDiv a a.icon-texas{
+				display: inline-block;
+				vertical-align: middle;
+				background: #9f4d31;
+				color: white;
+				font-size: 12px;
+				line-height: 1;
+				padding: 3px;
+				overflow: hidden;
+			}
+			div.cfLiDiv a a.icon-china{
+				display: inline-block;
+				width: 34px;
+				height: 21.125px;
+				margin-left: 20px;
+				vertical-align: middle;
+				background: url(http://css.mafengwo.net/images/mdd/place/flag.jpg)no-repeat;
+			}
+			

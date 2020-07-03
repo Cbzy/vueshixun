@@ -66,13 +66,13 @@
         <h2>热门目的地</h2>
         <div>
           <div class="r-navbar">
-            <div class="rn" v-for="(item,index) in hotList" :keys="index">
-              <p :class="{on:index==mouseOn}" v-on:mouseenter="changActive(index)">{{item.State}}</p>
+            <div class="rn" v-for="(item,index) in hotList" :key="index">
+              <p :class="{on:index==hotMouseOn}" v-on:mouseenter="hotChangActive(index)">{{item.State}}</p>
               <span>|</span>
             </div>
           </div>
-          <div class="r-content" v-for="(item,index) in hotList" :keys="index">
-            <dl v-for="(pItem,pIndex) in item.Country" :keys="index" v-if="item.Id===mouseOn + 1">
+          <div class="r-content" v-for="(item,index) in hotList" :key="index">
+            <dl v-for="(pItem,pIndex) in item.Country" :key="pIndex" v-if="item.Id===hotMouseOn + 1">
               <dt v-if="pItem.Province=='直辖市'" :style="{textDecoration:(pItem.Province=='直辖市'?'none':'underline')}">
                 {{pItem.Province}}
               </dt>
@@ -80,7 +80,7 @@
                 <a href="#">{{pItem.Province}}</a>
               </dt>
               <dd>
-                <a href="#" v-for="(cItem,cIindex) in pItem.pvc">{{cItem.city}}</a>
+                <a href="#" v-for="(cItem,cIndex) in pItem.pvc" :key="cIndex">{{cItem.city}}</a>
               </dd>
             </dl>
           </div>
@@ -95,13 +95,13 @@
         <h2>当季推荐</h2>
         <div>
           <div class="r-navbar">
-            <div class="rn" v-for="(item,index) in recommendList" :keys="index">
-              <p :class="{on:index==mouseOn}" v-on:mouseenter="changActive(index)">{{item.Month}}</p>
+            <div class="rn" v-for="(item,index) in recommendList" :key="index">
+              <p :class="{on:index==recommendMouseOn}" v-on:mouseenter="recommendChangActive(index)">{{item.Month}}</p>
               <span>|</span>
             </div>
           </div>
-          <div class="r-content" v-for="(item,index) in recommendList" :keys="index">
-            <div class="tiles" v-for="(rItem,rIndex) in item.Recommend" :keys="index" v-if="item.Id===mouseOn + 1">
+          <div class="r-content" v-for="(item,index) in recommendList" :key="index">
+            <div class="tiles" v-for="(rItem,rIndex) in item.Recommend" :key="rIndex" v-if="item.Id===recommendMouseOn + 1">
               <div class="item" :class="{col3 : rItem.rId == 1|rItem.rId == 2|rItem.rId == 3,col6 : rItem.rId == 4|rItem.rId == 5|rItem.rId == 6}" v-if="rItem.rId != 7">
                 <a href="#">
                   <img :src="rItem.cityImg" alt="recomment">
@@ -131,13 +131,13 @@
           <h2>主题推荐</h2>
           <div>
             <div class="r-navbar">
-              <div class="rn" v-for="(item,index) in themeList" :keys="index">
-                <p :class="{on:index==mouseOn}" v-on:mouseenter="changActive(index)">{{item.Condition}}</p>
+              <div class="rn" v-for="(item,index) in themeList" :key="index">
+                <p :class="{on:index==themeMouseOn}" v-on:mouseenter="themeChangActive(index)">{{item.Condition}}</p>
                 <span>|</span>
               </div>
             </div>
-            <div class="r-content" v-for="(item,index) in themeList" :keys="index">
-              <div class="tiles" v-for="(rItem,rIndex) in item.Theme" :keys="index" v-if="item.Id===mouseOn + 1">
+            <div class="r-content" v-for="(item,index) in themeList" :key="index">
+              <div class="tiles" v-for="(rItem,rIndex) in item.Theme" :key="rIndex" v-if="item.Id===themeMouseOn + 1">
                 <div class="item">
                   <a href="#">
                     <img :src="rItem.titleImg" alt="recomment">
@@ -161,14 +161,36 @@
 			  <span>（按拼音首字母排序）</span>
 			  <a href="#">
 			    <strong>+</strong>
-			    添加目的地
+			    <span>添加目的地</span>
 			  </a>
 		  </h2>
 
         </div>
         <div>
           <div class="r-navbar">
-
+			<div class="bd">
+				<div class="item" v-for="(item,index) in globalDestinationsList" :key="index">
+					<h3>{{item.State}}</h3>
+					<div class="clearfix">
+						<ul>
+							<li v-for="(tItem,tIndex) in item.Theme" :key="tIndex">
+								<h4>{{tItem.Initials}}</h4>
+								<div class="cfLiDiv">
+									<a href="#" v-for="(lItem,lIndex) in tItem.letterData" :key="lIndex">
+										{{lItem.chineseName}}
+										<span class="englishName">
+											{{lItem.englishName}}
+										</span>
+										<i v-if="lItem.Icon == 'hot'" class="icon-hot"></i>
+										<a v-if="lItem.Icon == 'Texas'" class="icon-texas">德克萨斯</a>
+										<a v-if="lItem.Icon == 'China'" class="icon-china"></a>
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
           </div>
 		</div>
       </div>
@@ -188,7 +210,10 @@ export default {
       hotList: [],
       recommendList: [],
       themeList: [],
-	  mouseOn: 0,
+	  globalDestinationsList: [],
+	  hotMouseOn: 0,
+	  recommendMouseOn: 0,
+	  themeMouseOn: 0,
 
     }
   },
@@ -200,24 +225,34 @@ export default {
       axios.get('../../static/Hot.json').then(response => {
         this.hotList = response.data;
       }, response => {
-        console.log("error");
+        console.log("get hotList is error");
       });
       axios.get('../../static/Recommend.json').then(response => {
         this.recommendList = response.data;
       }, response => {
-        console.log("error");
+        console.log("get recommendList is error");
       });
 	  axios.get('../../static/Theme.json').then(response => {
 	    this.themeList = response.data;
 	  }, response => {
-	    console.log("error");
+	    console.log("get themeList is error");
 	  });
+	  axios.get('../../static/GlobalDestinations.json').then(response => {
+		  this.globalDestinationsList = response.data;
+    }, response => {
+      console.log("get globalDestinationsList is error");
+    });
     },
-	changActive(index){
-		this.mouseOn = index;
-		// alert(this.mouseOn);
-		// $event.currentTarget.className="on";
+	hotChangActive(index){
+		this.hotMouseOn = index;
 	},
+	recommendChangActive(index){
+		this.recommendMouseOn = index;
+	},
+	themeChangActive(index){
+		this.themeMouseOn = index;
+	},
+
   }
 }
 </script>

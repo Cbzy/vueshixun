@@ -10,7 +10,7 @@
           <li class="head_nav_place"><router-link to="/Destination">目的地</router-link></li>
           <li class="head_nav_gonglve"><router-link to="/a">旅游攻略</router-link></li>
           <li class="head_nav_sales head_nav_dropdown head_nav_hover">
-             <router-link to="/Travel" class="drop_toggle">
+             <router-link to="/travel" class="drop_toggle">
                 <span>去旅行
                   <i class="icon_caret_down"></i>
                  </span>
@@ -236,7 +236,7 @@ export default {
   }
 }
 </script>
-<style>
+<style >
 
 
   @import url('./css/home.css');

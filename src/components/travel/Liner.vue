@@ -1,5 +1,5 @@
 <template>
     <div>
-        sales
+        邮轮
     </div>
 </template>

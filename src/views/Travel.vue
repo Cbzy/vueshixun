@@ -2,32 +2,27 @@
       <div class="FreeTravel">      
             <div class="topNav">
                   <ul>
-                        <li><div  class="topNavC"><router-link to="Travel"  active-class="topNavL">自由行</router-link></div></li>
+                        <li><div  class="topNavC"><router-link to="sales" active-class="topNavL">自由行</router-link></div></li>
                         <li><span>|</span></li>
-                        <li><div  class="topNavC">跟团游</div></li>
+                        <li><div  class="topNavC"><router-link to="teamtravel" active-class="topNavL">跟团游</router-link></div></li>
                         <li><span>|</span></li>                        
-                        <li><div  class="topNavC">当地游</div></li>
+                        <li><div  class="topNavC"><router-link to="localdeals" active-class="topNavL">当地游</router-link></div></li>
                         <li><span>|</span></li>
-                        <li><div  class="topNavC">签证</div></li>
+                        <li><div  class="topNavC"><router-link to="visa" active-class="topNavL">签证</router-link></div></li>
                         <li><span>|</span></li>
-                        <li><div  class="topNavC">全球WiFi</div></li>
+                        <li><div  class="topNavC"><router-link to="wf" active-class="topNavL">全球WiFi</router-link></div></li>
                         <li><span>|</span></li>
-                        <li><div  class="topNavC">邮轮</div></li>
+                        <li><div  class="topNavC"><router-link to="liner" active-class="topNavL">邮轮</router-link></div></li>
                   </ul>
             </div>
-            <SalesM></SalesM>
-            <TeamTravelM></TeamTravelM>
+            <router-view></router-view>
   </div>
 </template>
 
 <script>
-import SalesM from '@/components/Sales'
-import TeamTravelM from '@/components/TeamTravel'
 export default {
   name: 'Travel',
   components:{
-        SalesM,
-        TeamTravelM
   }
 }
 </script>
@@ -50,10 +45,10 @@ justify-content:center;
       .topNavC{
             line-height:40px;
             text-align: center;
-            height: 37px;
+            height: 40px;
             padding: 0 20px;
             font-size: 14px;
-            color: #666;
+
       }
       .topNav ul li span {
             color: #EEE;
@@ -61,13 +56,19 @@ justify-content:center;
             height: 37px;
             line-height: 37px;
       }
-
-      .topNavC:hover{
+      .topNavC :hover{
             color:#ff9d00;
       }
 
       .topNavL{
-            border-bottom: 3px solid #ff9d00
+            color:#ff9d00;
+            border-bottom: 3px solid #ff9d00;
+            height: 40px;
+            padding-bottom:8px;
+                       
       }
-      /* style="color:#ff9d00;border-bottom: 3px solid #ff9d00" */
+
+     .topNavC a{
+           color:#666 ;
+      }
 </style>

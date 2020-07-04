@@ -6,7 +6,7 @@
           <div class="show-info-top">
             <div class="info-left">
               <p>Don't fear the unknown</p>
-              <div class="ilDiv">
+              <div class="liDiv">
                 <input type="search" placeholder="我想去">
                 <a href="#" class="search">
                   <i></i>
@@ -222,7 +222,7 @@ export default {
   },
   methods: {
     getData() {
-      axios.get('../../static/Hot.json').then(response => {
+      axios.get('@/../static/Hot.json').then(response => {
         this.hotList = response.data;
       }, response => {
         console.log("get hotList is error");
@@ -259,5 +259,4 @@ export default {
 
 <style scoped>
   @import url(../css/Destination.css);
-  @import url(../css/font-awesome-4.7.0/css/font-awesome.css);
 </style>

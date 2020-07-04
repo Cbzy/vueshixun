@@ -15,7 +15,11 @@ input{
 html,body{
     width: 100%;
     /* height: 100%; */
+    min-width: 1260px;
     position: relative;
+}
+body{
+	background-color: #000000;
 }
 
 div.Destination{
@@ -57,9 +61,9 @@ div.show-info-top{
 }
 	div.info-left{
     width: 360px;
-    background-color: rgba(0,0,0,.4);
-    padding: 20px;
-    display: flex;
+	background-color: rgba(0,0,0,.4);
+	padding: 20px;
+	display: flex;
     flex-direction: column;
     justify-content: space-around;
     border-radius: 4px;
@@ -78,13 +82,15 @@ div.show-info-top{
       margin-bottom: 15px;
     }
     div.info-left input{
-      font: 18px/46px "微软雅黑";
+      font: 20px/1 "微软雅黑";
       width: 308px;
       height: 2.25rem;
       /* margin: 0 6px 0 0; */
       padding: 0 20px;
       background-color: #fff;
       border: 0 none;
+      line-height: 46px;
+      font-size: 18px;
       color: #111;
       border-radius: 4px;
       border: none;
@@ -457,10 +463,6 @@ div.tiles div.item{
 		display: block;
 		margin: 10px 15px 10px 0;
 		overflow: hidden;
-  }
-  div.item a:hover{
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
-    transition: box-shadow .2s ease-out;
 	}
 	div.col3 img{
 		display: block;
@@ -655,11 +657,10 @@ div.bd div.item{
 				text-align: left;
 				margin: 0;
 				/* margin-bottom: 16px; */
-        font: 14px/30px '微软雅黑';
+				font: 14px/30px '微软雅黑';
 			}
 			div.cfLiDiv a:hover{
-        text-decoration: underline;
-        box-shadow: none;
+				text-decoration: underline;
 			}
 			div.cfLiDiv a span.englishName{
 				color: #A8A8A8;
@@ -691,3 +692,4 @@ div.bd div.item{
 				vertical-align: middle;
 				background: url(http://css.mafengwo.net/images/mdd/place/flag.jpg)no-repeat;
 			}
+

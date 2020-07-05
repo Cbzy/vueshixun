@@ -8,6 +8,7 @@ import Localdeals from '@/components/travel/Localdeals'
 import Wf from '@/components/travel/Wf'
 import Visa from '@/components/travel/Visa'
 import Liner from '@/components/travel/Liner'
+import Strategy from '@/views/Strategy'
 Vue.use(Router)
 
 export default new Router({
@@ -16,6 +17,11 @@ export default new Router({
       path: '/destination',
       name: 'Destination',
       component: Destination
+    },
+    {
+      path: '/strategy',
+      name: 'Strategy',
+      component: Strategy
     },
     {
       path: '/travel',

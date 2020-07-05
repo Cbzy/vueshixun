@@ -8,7 +8,7 @@
         <ul class="head_nav">
           <li class="head_nav_index"><router-link to="/">首页</router-link> </li>
           <li class="head_nav_place"><router-link to="/Destination">目的地</router-link></li>
-          <li class="head_nav_gonglve"><router-link to="/a">旅游攻略</router-link></li>
+          <li class="head_nav_gonglve"><router-link to="/Strategy">旅游攻略</router-link></li>
           <li class="head_nav_sales head_nav_dropdown head_nav_hover">
              <router-link to="/travel" class="drop_toggle">
                 <span>去旅行

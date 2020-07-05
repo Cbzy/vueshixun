@@ -232,16 +232,16 @@ export default {
       }, response => {
         console.log("get recommendList is error");
       });
-	  axios.get('../../static/Theme.json').then(response => {
-	    this.themeList = response.data;
-	  }, response => {
-	    console.log("get themeList is error");
-	  });
-	  axios.get('../../static/GlobalDestinations.json').then(response => {
-		  this.globalDestinationsList = response.data;
-    }, response => {
-      console.log("get globalDestinationsList is error");
-    });
+      axios.get('../../static/Theme.json').then(response => {
+        this.themeList = response.data;
+      }, response => {
+        console.log("get themeList is error");
+      });
+      axios.get('../../static/GlobalDestinations.json').then(response => {
+        this.globalDestinationsList = response.data;
+      }, response => {
+        console.log("get globalDestinationsList is error");
+      });
     },
 	hotChangActive(index){
 		this.hotMouseOn = index;

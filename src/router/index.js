@@ -9,10 +9,44 @@ import Wf from '@/components/travel/Wf'
 import Visa from '@/components/travel/Visa'
 import Liner from '@/components/travel/Liner'
 import Strategy from '@/views/Strategy'
+import Home from '../views/Home.vue'
+import HomeNav from '../views/HomeNav.vue'
+import HomeAside from '../views/HomeAside.vue'
+import HomeWrapper from '../views/HomeWrapper.vue'
+import HomeNew from '../views/HomeNew.vue'
+import HomeHot from '../views/HomeHot.vue'
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path:'',
+      redirect:'/home'
+    },
+    {
+      path: '/home',
+      components: {
+        default:Home,
+        HomeNav,
+        HomeAside,
+        HomeWrapper
+      }
+      ,
+      children:[
+        {
+          path:'',
+          redirect:'hot'
+        },
+        {
+          path:'hot',
+          component:HomeHot
+        },
+        {
+          path:'new',
+          component:HomeNew
+        }
+      ]
+    },
     {
       path: '/destination',
       name: 'Destination',

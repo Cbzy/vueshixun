@@ -25,7 +25,10 @@
                 </ul>
               </div>
           </li>
-          <li class="head_nav_flight"><router-link to="/b">机票火车票</router-link></li>
+          <li class="head_nav_flight">
+            <router-link to="/ticket">机票火车票</router-link>
+
+            </li>
           <li class="head_nav_hotel"><router-link to="/c">订酒店</router-link></li>
           <li class="head_nav_community">
             <div class="drop_toggle">
@@ -83,22 +86,14 @@
             <a href="#" class="qq_login"></a>
             <a href="#" class="weixin_login"></a>
             <a href="#" id="_jshow"></a>   -->
-          </div>  
-        </div> 
+          </div>
+        </div>
       </div>
     </div>
     <div id="v-content" v-bind:style="{minHeight:Height+'px'}">
-     
-      <div class="main">
-      <router-view/>
-      
-    </div>
-    <div class="mfw-container clearfix">
-        <router-view name="HomeNav"></router-view>
-        <router-view name="HomeAside"></router-view>
-        <router-view name="HomeWrapper"></router-view>
-    </div></div>
-    
+
+      <router-view/></div>
+
     <div class="homefooter">
       <div class="hft_content">
         <div class="hft_info">
@@ -170,7 +165,7 @@
                 <li style="width:120px"><a href="#" class="highlight">旅游商城全球商家入驻</a></li>
               </ul>
             </dd>
-            
+
           </dl>
           <dl class="hft-info-col hft_info_qrcode">
            <dd>
@@ -228,7 +223,7 @@
       </div>
     </div>
   </div>
-  
+
 </template>
 <script>
 export default {

@@ -15,81 +15,97 @@ import HomeAside from '../views/HomeAside.vue'
 import HomeWrapper from '../views/HomeWrapper.vue'
 import HomeNew from '../views/HomeNew.vue'
 import HomeHot from '../views/HomeHot.vue'
+import Ticket from '@/views/Ticket'
+import Oneway from '@/components/ticket/Oneway'
+import Twoway from '@/components/ticket/Twoway'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
-      path:'',
-      redirect:'/home'
-    },
-    {
-      path: '/home',
-      components: {
-        default:Home,
-        HomeNav,
-        HomeAside,
-        HomeWrapper
-      }
-      ,
-      children:[
-        {
-          path:'',
-          redirect:'hot'
-        },
-        {
-          path:'hot',
-          component:HomeHot
-        },
-        {
-          path:'new',
-          component:HomeNew
-        }
-      ]
-    },
-    {
-      path: '/destination',
-      name: 'Destination',
-      component: Destination
-    },
-    {
-      path: '/strategy',
-      name: 'Strategy',
-      component: Strategy
-    },
-    {
-      path: '/travel',
-      component:Travel,
-      children: [
-        {
-          path: "/travel/sales",
-          component: Sales
-        },
-        {
-          path: '/travel/teamtravel',
-          component: TeamTravel
-        },
-        {
-          path: '/travel/localdeals',
-          component: Localdeals
-        },
-        {
-          path: '/travel/wf',
-          component: Wf
-        },
-        {
-          path: '/travel/visa',
-          component: Visa
-        },
-        {
-          path: '/travel/liner',
-          component: Liner
-        },
-        {
-          path: "",
-          redirect:"/travel/sales"
-        }
-      ]
-    },
-  ]
-})
+        routes: [{
+                path: '',
+                redirect: '/home'
+            },
+            {
+                path: '/home',
+                components: {
+                    default: Home,
+                    HomeNav,
+                    HomeAside,
+                    HomeWrapper
+                },
+                children: [{
+                        path: '',
+                        redirect: 'hot'
+                    },
+                    {
+                        path: 'hot',
+                        component: HomeHot
+                    },
+                    {
+                        path: 'new',
+                        component: HomeNew
+                    }
+                ]
+            },
+            {
+                path: "/ticket",
+                name: 'Ticket',
+                // redirect: 'oneway',
+                component: Ticket,
+                children: [{
+                    path: "/ticket/oneway",
+                    component: Oneway,
+
+                }, {
+                    path: "/ticket/twoway",
+                    component: Twoway
+                }]
+
+            },
+            {
+                path: '/destination',
+                name: 'Destination',
+                component: Destination
+            },
+            {
+                path: '/strategy',
+                name: 'Strategy',
+                component: Strategy
+            },
+            {
+                path: '/travel',
+                component: Travel,
+                children: [{
+                        path: "/travel/sales",
+                        component: Sales
+                    },
+                    {
+                        path: '/travel/teamtravel',
+                        component: TeamTravel
+                    },
+                    {
+                        path: '/travel/localdeals',
+                        component: Localdeals
+                    },
+                    {
+                        path: '/travel/wf',
+                        component: Wf
+                    },
+                    {
+                        path: '/travel/visa',
+                        component: Visa
+                    },
+                    {
+                        path: '/travel/liner',
+                        component: Liner
+                    },
+                    {
+                        path: "",
+                        redirect: "/travel/sales"
+                    }
+                ]
+            },
+
+        ]
+    })
+    //机票火车票

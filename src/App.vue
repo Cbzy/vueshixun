@@ -92,7 +92,17 @@
     </div>
     <div id="v-content" v-bind:style="{minHeight:Height+'px'}">
 
-      <router-view/></div>
+       <div class="main">
+      <router-view/>
+      
+    </div>
+    <div class="mfw-container clearfix">
+        <router-view name="HomeNav"></router-view>
+        <router-view name="HomeAside"></router-view>
+        <router-view name="HomeWrapper"></router-view>
+    </div>
+   
+      </div>
 
     <div class="homefooter">
       <div class="hft_content">
@@ -240,7 +250,6 @@ export default {
 }
 </script>
 <style >
-
   @import url('./css/app.css');
   @import url('./css/home.css');
 </style>

@@ -18,6 +18,7 @@ import HomeHot from '../views/HomeHot.vue'
 import Ticket from '@/views/Ticket'
 import Oneway from '@/components/ticket/Oneway'
 import Twoway from '@/components/ticket/Twoway'
+import Free from '../views/Free'
 Vue.use(Router)
 
 export default new Router({
@@ -68,9 +69,18 @@ export default new Router({
                 component: Destination
             },
             {
+                path: '/free',
+                name: 'Free',
+                component: Free
+            },
+            {
                 path: '/strategy',
                 name: 'Strategy',
-                component: Strategy
+                component: Strategy,
+                // children: [{
+                //     path: "/strategy/free",
+                //     component: Free
+                // },]
             },
             {
                 path: '/travel',

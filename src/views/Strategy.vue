@@ -145,7 +145,7 @@
           <!-- 帖子类型1 -->
           <ul class="postType1">
             <li>
-              <a href="#">
+              <a href="#" @click="getUrl">
                 <div class="user">
                   <span class="user_span">
                     <i class="userimg"></i>
@@ -351,7 +351,10 @@
   methods: {
   	  gotoPage(index) {
   	    this.currentIndex = index;
-  	  },
+      },
+      getUrl(){
+        this.$router.replace('/Free')
+      }
   	},
   	computed: {
   	  //上一张
@@ -381,7 +384,8 @@
   },
   beforeDestroy() {
     clearInterval(this.timer);
-  }
+  },
+ 
 }
 </script>
 

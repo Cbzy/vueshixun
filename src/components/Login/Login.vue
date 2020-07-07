@@ -41,7 +41,7 @@
 					</div>
 				</div>
 				<div class="account_right">
-					<a href="javaScript:;" @click="appShow"></a>
+					<a href="/home"></a>
 					<!-- <router-link to="/home" @click="appShow"></router-link> -->
 				</div>
 			</div>
@@ -72,7 +72,6 @@ export default {
 		  Err2Text: '',
 		  username: '',
 		  pwd:'',
-		  loginFrame: false,
 	  }
   },
   methods:{
@@ -91,10 +90,6 @@ export default {
 	  },
 	  mouseOut(){
 		  this.scan = false;
-	  },
-	  appShow(){
-      this.loginShow = false;
-      console.log(this.loginShow)
 	  }
   }
 }

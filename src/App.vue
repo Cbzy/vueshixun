@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-	<div id="login" v-if="loginShow">
+	<div id="login" v-if="loginShow==1">
 		<login></login>
+	</div>
+	<div id="register" v-else-if="loginShow==2">
+		<register></register>
 	</div>
 	<div id="index" v-else>
 		<div id="nav">
@@ -85,7 +88,7 @@
 		          <router-link to="" class="weixin_login"></router-link>
 		          <a id="_j_showlogin" @click="lShowChange" >登录</a>
 		          <span class="split">|</span>
-		          <a to="" >注册</a>
+		          <a @click="rShowChange">注册</a>
 		          <!-- <a href="#" class="weibo_login"></a>
 		          <a href="#" class="qq_login"></a>
 		          <a href="#" class="weixin_login"></a>
@@ -231,6 +234,7 @@
 </template>
 <script>
 import Login from "@/components/Login/Login"
+import Register from "@/components/Login/Register"
 
 export default {
 
@@ -238,31 +242,25 @@ export default {
   data(){
     return{
       Height:0,
-	    loginShow: false,
+	    loginShow: 0,
     }
   },
   mounted(){
     this.Height=document.documentElement.clientHeight - 100;
     window.onresize = ()=>{this.Height = document.documentElement.clientHeight -100};
-    if(this.loginShow==false||this.loginShow=='false'){
-      this.loginShow = false;
-    }
   },
   methods:{
-	  lShowChange(){
-		  this.loginShow = true;
+  lShowChange(){
+		  this.loginShow = 1;
+    },
+    rShowChange(){
+		  this.loginShow = 2;
 	  }
   },
   components:{
     Login,
+    Register
   },
-  // created() {
-	//   alert(sessionStorage.loginShow);
-  // 	if(this.loginShow==null||this.loginShow==false){
-	// 	sessionStorage.setItem("loginShow",false);
-	// 	// alert(sessionStorage.getItem("loginShow"));
-	// }
-  // }
 }
 </script>
 <style >

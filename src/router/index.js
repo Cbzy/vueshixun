@@ -18,8 +18,6 @@ import HomeHot from '../views/HomeHot.vue'
 import Ticket from '@/views/Ticket'
 import Oneway from '@/components/ticket/Oneway'
 import Twoway from '@/components/ticket/Twoway'
-
-import Register from '@/views/Register'
 Vue.use(Router)
 
 export default new Router({
@@ -69,11 +67,6 @@ export default new Router({
                 path: '/destination',
                 name: 'Destination',
                 component: Destination
-            },
-            {
-              path: '/register',
-              name: 'Register',
-              component: Register
             },
             {
                 path: '/strategy',

@@ -18,10 +18,13 @@ import HomeHot from '../views/HomeHot.vue'
 import Ticket from '@/views/Ticket'
 import Oneway from '@/components/ticket/Oneway'
 import Twoway from '@/components/ticket/Twoway'
+
+import Register from '@/views/Register'
 Vue.use(Router)
 
 export default new Router({
-        routes: [{
+        routes: [
+            {
                 path: '',
                 redirect: '/home'
             },
@@ -68,6 +71,11 @@ export default new Router({
                 component: Destination
             },
             {
+              path: '/register',
+              name: 'Register',
+              component: Register
+            },
+            {
                 path: '/strategy',
                 name: 'Strategy',
                 component: Strategy
@@ -105,7 +113,5 @@ export default new Router({
                     }
                 ]
             },
-
         ]
     })
-    //机票火车票

@@ -1,0 +1,279 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+ul,li{
+    list-style: none;
+}
+input{
+  outline: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+	min-height: 640px;
+    min-width: 1260px;
+    position: relative;
+}
+body{
+	background: url(../assets/Login/17.jpg) no-repeat 100% 100%;
+}
+
+div#app{
+  width: 100%;
+  height: 100%;
+}
+div#login{
+  width: 100%;
+  height: 100%;
+}
+
+
+div.login{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+
+section.loginFrame{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+  width: 730px;
+}
+div.account{
+	width: 100%;
+	height: 27.125rem;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 3px 3px rgba(0,0,0,.4);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+div.account div.account_left{
+	width: 27.5rem;
+	padding: 0 60px;
+	box-sizing: border-box;
+	position: relative;
+}
+	div.account_left nav{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		border-bottom: 1px solid #f6f7f9;
+		margin: 0 2.5rem;
+	}
+	div.account_left nav p{
+		text-align: center;
+		font: 18px/25px "微软雅黑";
+		color: #717376;
+		padding: 40px 0 12px;
+		cursor: pointer;
+		white-space: nowrap;
+		position: relative;
+	}
+	div.account_left nav p.on::after{
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+		display: inline-block;
+		width: 50px;
+		border-bottom: 4px solid #FF9D00;
+		border-radius: 4px;
+	}
+	div.account_left div.qrcode_tip{
+		font-size: 14px;
+		color: #717376;
+		line-height: 20px;
+		margin-top: 30px;
+	}
+		div.qrcode_tip p{
+			text-align: center;
+		}
+		div.qrcode_tip p a{
+			color: #4d97ff;
+		}
+	div.account_left div.qrcode_photo{
+		position: relative;
+	}
+		div.qrcode_photo img{
+			display: block;
+			margin: 0 auto;
+		}
+		div.qrcode_photo div.scan{
+			position: absolute;
+			right: -40%;
+			bottom: -50%;
+			z-index: 100;
+		}
+	div.account_left div.form-field{
+		position: relative;
+		padding-top: 40px;
+	}
+		div.form-field div.login-err{
+			position: absolute;
+			top: 0;
+			width: 100%;
+			color: #a94442;
+			background-color: #f2dede;
+			border-color: #ebccd1;
+			padding: 6px 10px;
+			border: 1px solid transparent;
+			border-radius: 4px;
+			text-align: left;
+			font-size: 12px;
+		}
+		div.form-field div.login-err2{
+			position: absolute;
+			top: 32px;
+			background: url(../assets/Login/err_ico2.png) 0 -60px no-repeat #fff;
+			padding: 0 0 3px 22px;
+			font-size: 12px;
+			color: #ff3c00;
+			text-align: left;
+		}
+		div.form-field input{
+			border: none;
+			width: 100%;
+			line-height: 28px;
+			border-radius: 6px;
+			padding: 6px 0 6px 12px;
+			margin-top: 16px;
+			box-sizing: border-box;
+			margin-bottom: 5px;
+		}
+		div.form-field input.tp:focus{
+			border: 1px solid #ffa200;
+			box-shadow: 0 0 5px #ffa200;
+			transition: box-shadow .25s linear 0s;
+		}
+		div.form-field p{
+			font: 12px/15px "微软雅黑";
+			text-align: right;
+			margin-top: 10px;
+		}
+		div.form-field a{
+			color: #717376;
+		}
+		div.form-field a:hover{
+			text-decoration: underline;
+		}
+		div.form-field input.sub{
+			background: linear-gradient(135deg,rgba(255,149,0,1) 0,rgba(255,165,38,1) 100%);
+			color: white;
+			font-size: 20px;
+			letter-spacing: 20px;
+			text-indent: 20px;
+			text-align: center;
+			padding: 6px 0;
+		}
+		div.connect{
+			height: 6.25rem;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 0 40px;
+		}
+		div.connect p{
+			font: 14px/20px "微软雅黑";
+			color: rgba(148,150,154,1);
+			padding: 12px 0;
+		}
+		div.connect div.bd{
+			
+		}
+		div.connect a{
+			display: inline-block;
+			width: 34px;
+			height: 34px;
+			margin-right: 32px;
+			cursor: pointer;
+			background-size: 34px;
+			background-repeat: no-repeat;
+			transition: all .3s;
+		}
+		div.connect a:nth-of-type(1){
+			background-image: url(../assets/Login/ic_weibo.png);
+		}
+		div.connect a:nth-of-type(2){
+			background-image: url(../assets/Login/ic_qq.png);
+		}
+		div.connect a:nth-of-type(3){
+			background-image: url(../assets/Login/ic_weixin.png);
+		}
+		div.connect a:hover:nth-of-type(1){
+			background-image: url(../assets/Login/ic_weibo_sel.png);
+		}
+		div.connect a:hover:nth-of-type(2){
+			background-image: url(../assets/Login/ic_qq_sel.png);
+		}
+		div.connect a:hover:nth-of-type(3){
+			background-image: url(../assets/Login/ic_weixin_sel.png);
+		}
+		
+div.account div.account_right{
+	    width: 18.125rem;
+	    height: 100%;
+	    box-sizing: border-box;
+	    background: url(../assets/Login/img_download.png) no-repeat;
+	    border-radius: 0 8px 8px 0;
+	    position: relative;
+}
+	div.account_right a{
+	    display: inline-block;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		bottom: 15px;
+		right: 12px;
+		cursor: pointer;
+	}
+
+
+div.bottom-link{
+	width: 140px;
+	margin: 10px auto;
+	background-color: #000;
+	border-radius: 15px;
+	background-color: rgba(0,0,0,.4);
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+	padding: 4px 0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.4);
+}
+div.bottom-link a{
+	color: #ffa800;
+	margin-left: 6px;
+}
+div.bottom-link a:hover{
+	text-decoration: underline;
+}
+
+
+
+div.photoby{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	font: 12px/24px "微软雅黑";
+  color: white;
+  z-index: 100;
+}
+div.photoby a{
+  font: 12px/24px "微软雅黑";
+  color: white;
+}
+div.photoby a:hover{
+	text-decoration: underline;
+}

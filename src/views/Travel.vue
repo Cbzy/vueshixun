@@ -1,11 +1,11 @@
 <template>
-      <div class="FreeTravel">      
+      <div class="FreeTravel">
             <div class="topNav">
                   <ul>
                         <li><div  class="topNavC"><router-link to="sales" active-class="topNavL">自由行</router-link></div></li>
                         <li><span>|</span></li>
                         <li><div  class="topNavC"><router-link to="teamtravel" active-class="topNavL">跟团游</router-link></div></li>
-                        <li><span>|</span></li>                        
+                        <li><span>|</span></li>
                         <li><div  class="topNavC"><router-link to="localdeals" active-class="topNavL">当地游</router-link></div></li>
                         <li><span>|</span></li>
                         <li><div  class="topNavC"><router-link to="visa" active-class="topNavL">签证</router-link></div></li>
@@ -41,7 +41,7 @@ justify-content:center;
 
       .topNav ul {
             width:502px;
-      }      
+      }
       .topNavC{
             line-height:40px;
             text-align: center;
@@ -65,7 +65,7 @@ justify-content:center;
             border-bottom: 3px solid #ff9d00;
             height: 40px;
             padding-bottom:8px;
-                       
+
       }
 
      .topNavC a{

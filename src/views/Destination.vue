@@ -259,5 +259,4 @@ export default {
 
 <style scoped>
   @import url(../css/Destination.css);
-  @import url(../css/font-awesome-4.7.0/css/font-awesome.css);
 </style>

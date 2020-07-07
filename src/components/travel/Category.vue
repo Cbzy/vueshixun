@@ -8,14 +8,23 @@
         <div class="safeguard">
             <ul>
                 <li class="icon1">
-                    <div class="icon11"></div>
-                    <strong>透明低价</strong><br>
-                    超值低价，每日更新
+                    <div class="icon11"></div>&nbsp;&nbsp;
+                    <strong style="color:#333; margin-bottom:2px;line-height: 20px;">透明低价</strong><br>
+                   &nbsp;&nbsp;超值低价，每日更新
                 </li>
-                <li class="icon2"></li>
-                <li class="icon3"></li>
+               <li class="icon1">
+                    <div class="icon22"></div>&nbsp;&nbsp;
+                    <strong style="color:#333; margin-bottom:2px;line-height: 20px;">透明低价</strong><br>
+                   &nbsp;&nbsp;超值低价，每日更新
+                </li>
+                <li class="icon1">
+                    <div class="icon33"></div>&nbsp;&nbsp;
+                    <strong style="color:#333; margin-bottom:2px;line-height: 20px;">透明低价</strong><br>
+                   &nbsp;&nbsp;超值低价，每日更新
+                </li>
             </ul>
         </div>
+        
     </div>
 </template>
 <script>
@@ -25,11 +34,12 @@ export default {
 </script>
 <style scoped>
     .category{
-        background-color: #eee;
+        background-color: #fff;
         width:1000px;
         height: 480px;
         margin: 0 auto;
         margin-top:-2px;
+        margin-bottom: 40px;
     }
     .change{
         width:260px;
@@ -66,6 +76,7 @@ export default {
         width: 180px;
         height: 40px;
         float: right;
+        color: #999;
         
     }
 
@@ -74,6 +85,21 @@ export default {
         width:36px;
         height: 36px;
         background: url(../../assets/travel/logo.png) no-repeat -30px 0px;
+
+    }
+
+        .icon22{
+        float: left;
+        width:36px;
+        height: 36px;
+        background: url(../../assets/travel/logo.png) no-repeat -30px -40px;
+
+    }
+        .icon33{
+        float: left;
+        width:36px;
+        height: 36px;
+        background: url(../../assets/travel/logo.png) no-repeat -30px -80px;
 
     }
     

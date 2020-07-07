@@ -2,16 +2,19 @@
     <div>
         <SelectM></SelectM>
         <CategoryM></CategoryM>
+        <WeekHotM></WeekHotM>
         
     </div>
 </template>
 <script>
-import SelectM from "@/components/travel/select"
+import SelectM from "@/components/travel/Select"
 import CategoryM from "@/components/travel/Category"
+import WeekHotM from "@/components/travel/WeekHot"
 export default {
     components:{
         SelectM: SelectM,
-        CategoryM: CategoryM
+        CategoryM: CategoryM,
+        WeekHotM:WeekHotM
     }
 }
 </script>

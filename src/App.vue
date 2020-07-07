@@ -172,6 +172,7 @@
 		              <li style="width:120px"><a href="#" class="highlight">旅游商城全球商家入驻</a></li>
 		            </ul>
 		          </dd>
+		        </dl>
        <div class="main">
       <router-view/>
 

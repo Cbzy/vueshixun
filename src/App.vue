@@ -1,10 +1,7 @@
 <template>
   <div id="app">
-	<div id="login" v-if="loginShow==1">
-		<login></login>
-	</div>
-	<div id="register" v-else-if="loginShow==2">
-		<register></register>
+	<div id="login" v-if="loginShow">
+		<login :msg="rShow" @getData="getData"></login>
 	</div>
 	<div id="index" v-else>
 		<div id="nav">
@@ -86,7 +83,7 @@
 		          <router-link to="" class="weibo_login"></router-link>
 		          <router-link to="" class="qq_login"></router-link>
 		          <router-link to="" class="weixin_login"></router-link>
-		          <a id="_j_showlogin" @click="lShowChange" >登录</a>
+		          <a @click="lShowChange" id="_j_showlogin">登录</a>
 		          <span class="split">|</span>
 		          <a @click="rShowChange">注册</a>
 		          <!-- <a href="#" class="weibo_login"></a>
@@ -376,7 +373,6 @@
 </template>
 <script>
 import Login from "@/components/Login/Login"
-import Register from "@/components/Login/Register"
 
 export default {
 
@@ -384,7 +380,10 @@ export default {
   data(){
     return{
       Height:0,
-	    loginShow: 0,
+	    loginShow: false,
+		rShow:true,
+
+		username: localStorage.getItem('login'),
     }
   },
   mounted(){
@@ -392,16 +391,24 @@ export default {
     window.onresize = ()=>{this.Height = document.documentElement.clientHeight -100};
   },
   methods:{
-  lShowChange(){
-		  this.loginShow = 1;
-    },
+	  lShowChange(){
+	  	this.loginShow = true;
+		this.rShow = true;
+	    },
     rShowChange(){
-		  this.loginShow = 2;
-	  }
+		this.loginShow = true;
+		this.rShow = false;
+		this.msg = this.rlShow;
+	  },
+	  getData(data) {
+		this.loginShow = data;
+	  },
+	  logoutHandle(){
+	  	localStorage.removeItem('login');
+	  },
   },
   components:{
     Login,
-    Register
   },
 }
 </script>

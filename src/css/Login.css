@@ -20,7 +20,9 @@ html,body{
     position: relative;
 }
 body{
-	background: url(../assets/Login/17.jpg) no-repeat 100% 100%;
+  background: url(../assets/Login/17.jpg) no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 div#app{
@@ -196,7 +198,7 @@ div.account div.account_left{
 			padding: 12px 0;
 		}
 		div.connect div.bd{
-			
+
 		}
 		div.connect a{
 			display: inline-block;
@@ -226,7 +228,7 @@ div.account div.account_left{
 		div.connect a:hover:nth-of-type(3){
 			background-image: url(../assets/Login/ic_weixin_sel.png);
 		}
-		
+
 div.account div.account_right{
 	    width: 18.125rem;
 	    height: 100%;
@@ -286,7 +288,7 @@ div.photoby a:hover{
 
 
 div.LoginFrame{
-	
+
 }
 div.RegisterFrame{
 	display: flex;
@@ -383,7 +385,7 @@ div.random input{
 	margin: 0;
 }
 section.RegisterWindow div.logo{
-	
+
 }
 div.logo a{
 	width: 75px;

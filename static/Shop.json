@@ -1,0 +1,30 @@
+[
+    {
+        "id":"1",
+        "img":"https://b1-q.mafengwo.net/s12/M00/00/F0/wKgED1wrJECAA4pHAASWNqVsJ0I664.png?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100",
+        "main":"武汉直飞成都+都青/峨乐/九寨沟5天自由行（三大主题任选+可定制旅行+川剧变脸/熊猫门票/地道伴手礼3选1+专车接送机）",
+        "money":"3800",
+        "shop":"Gogo旅行"
+    },
+    {
+        "id":"2",
+        "img":"https://n1-q.mafengwo.net/s12/M00/DE/7B/wKgED1uq7TSAJUqeABAZKsT-3Ig394.gif?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100",
+        "main":"西安直飞迪拜5晚7天自由行(帆船酒店/棕榈岛亚特兰蒂斯/VIP中文接送机/哈利法塔/冲沙/酒店混搭入住/阿布扎比畅玩）",
+        "money":"12980",
+        "shop":"丝路假期"
+    },
+    {
+        "id":"3",
+        "img":"https://b1-q.mafengwo.net/s11/M00/E8/E0/wKgBEFtOu8OAEuQdAAIZJJG6LOA76.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100",
+        "main":"杭州直飞厦门4天3晚自由行（五星/海景/网红/等多款酒店任选+住一晚鼓浪屿磐诺假日·自助早餐+专车接送机+赠鼓浪屿船票+帆船出海体验/鹭江夜游）",
+        "money":"2640",
+        "shop":"GO爱旅行"
+    },
+    {
+        "id":"4",
+        "img":"https://n1-q.mafengwo.net/s14/M00/15/55/wKgE2l1U0HWAXGo8AAmbzJq2mfs22.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100",
+        "main":"【春节火热预定中·直飞】成都直飞日本本州7天6晚半自助游（升级日式温泉酒店+银座+浅草寺+秋叶原+奈良公园+大阪城公园+富士山）",
+        "money":"0",
+        "shop":"全球通国旅"
+    }
+]

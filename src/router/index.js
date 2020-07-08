@@ -52,16 +52,16 @@ export default new Router({
             {
                 path: "/ticket",
                 name: 'Ticket',
-                // redirect: 'oneway',
+                //redirect: 'oneway', //
                 component: Ticket,
-                children: [{
-                    path: "/ticket/oneway",
-                    component: Oneway,
+                // children: [{
+                //     path: "oneway",
+                //     component: Oneway,
 
-                }, {
-                    path: "/ticket/twoway",
-                    component: Twoway
-                }]
+                // }, {
+                //     path: "twoway",
+                //     component: Twoway
+                // }]
 
             },
             {

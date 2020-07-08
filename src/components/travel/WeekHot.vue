@@ -21,9 +21,10 @@
                <ul>
                     <li>
                     <div class="cap1">
-                      <!-- <div class="caption">美到窒息的海+海岛控的梦想之地·深圳往返大溪地8天6晚自由行（免费行程路书+咨询可领优惠券+24小时中文服务+全程管家服务+可开免签证明+可安排当地游）</div>  -->
-
+                        <img src="../../assets/travel/CoUBGV2oOp-AXLpKAAJI2SSazu851.jpeg" alt="">
                     </div>
+                                          <!-- <div class="caption">美到窒息的海+海岛控的梦想之地·深圳往返大溪地8天6晚自由行（免费行程路书+咨询可领优惠券+24小时中文服务+全程管家服务+可开免签证明+可安排当地游）</div>  -->
+
                         <div class="cards">￥34699<i style="font-size:14px;font-style:normal">起</i><i style="float: right;padding-top: 8px;font-size: 12px;color: #666;font-style:normal;line-height:34px">店铺111111</i></div>
                     </li>
                     <li>
@@ -82,8 +83,6 @@ export default {
          height:186px; 
         background-size: 238px 186px;
          overflow: hidden;
-         background: url(../../assets/travel/CoUBGV2oOp-AXLpKAAJI2SSazu851.jpeg) ; 
-        /* background: red; */
     }
 
     .caption{

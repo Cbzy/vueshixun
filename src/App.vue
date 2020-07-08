@@ -103,7 +103,7 @@
 
 		  <div class="homefooter">
 		    <div class="hft_content">
-		      <div class="hft_info">
+		      <!-- <div class="hft_info">
 		        <dl class="hft-info-col hft_info_intro">
 		          <dt>马蜂窝旅游网</dt>
 		          <dd>中国年轻一代用得更多的旅游网站</dd>
@@ -183,7 +183,7 @@
         <router-view name="HomeWrapper"></router-view>
     </div>
 
-      </div>
+      </div> -->
 
     <div class="homefooter">
       <div class="hft_content">
@@ -315,7 +315,7 @@
     </div>
   </div>
 
-		        </dl>
+		        <!-- <div>
 		        <dl class="hft-info-col hft_info_qrcode">
 		         <dd>
 		           <span class="hft_qrcode_tejia"></span>
@@ -338,8 +338,8 @@
 		            <a href="#" class="hft_social_qzone"><i class="hft_social-icon"></i></a>
 		          </dd>
 		        </dl>
-		      </div>
-		      <div class="hft_copyright">
+		      </div> -->
+		      <!-- <div class="hft_copyright">
 		          <a href="#"><i class="hft_mfw_logo"></i></a>
 		          <p>
 		            © 2020 Mafengwo.cn
@@ -363,12 +363,12 @@
 		            <span class="m_l_10">海外</span>
 		            <span class="highlight">+86-10-8341-6888</span>
 		          </p>
-		      </div>
-		      <div class="hft_safety">
+		      </div> -->
+		      <!-- <div class="hft_safety">
 		          <a href="#" class="s-b"></a>
 		          <a href="#" class="s-c"></a>
 		          <a href="#" class="s-d"></a>
-		      </div>
+		      </div> -->
 		    </div>
 		  </div>
 		</div>

@@ -1,0 +1,55 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+/* 筛选块 */
+div.screenBox{
+  border: 1px dashed red;
+  width: 1000px;
+  min-width: 1000px;
+  height: 318px;
+  margin: 0 auto 20px;
+}
+
+/* 产品块 */
+div.productBox{
+  margin: 0 auto;
+  width: 1000px;
+}
+div.productBox_left{
+
+}
+div.miniScreen{
+  width: 700px;
+  height: 44px;
+  line-height: 44px;
+  border-bottom: 1px solid #e9e9e9;
+  font-size: 12px;
+}
+ul.miniScreen_ul{
+  display: flex;
+  flex-wrap: nowrap;
+}
+ul.miniScreen_ul li{
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+ul.miniScreen_ul li:hover{
+  color: #FF9D00;
+}
+ul.miniScreen_ul li i{
+  display: inline-block;
+  margin-left: 5px;
+  width: 9px;
+  height: 5px;
+  background: url(../assets/travel/sales-list-sprites7.png) no-repeat -30px -45px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+/* 产品列表 */
+div.productList{
+  
+}

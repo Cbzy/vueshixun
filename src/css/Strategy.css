@@ -38,6 +38,7 @@ div.mddNavigation_search {
 div.mddNavigation_local {
   border: 1px solid #ddd;
   height: 165px;
+  position: relative;
 }
 
 div.mddNavigation_local ul {
@@ -64,6 +65,14 @@ div.mddNavigation_local li {
 div.mddNavigation li:nth-last-child(1) {
   border-bottom: none;
 }
+li.mddNavigation_li:hover{
+  color: #FFA800;
+  cursor: default;
+}
+li.mddNavigation_li:hover .fold{
+  background: url(../assets/Strategy/new-gl-icon6.png) no-repeat -30px -40px;
+}
+
 
 .fold {
   float: right;
@@ -73,6 +82,111 @@ div.mddNavigation li:nth-last-child(1) {
   margin-top: 15px;
   margin-right: 15px;
 }
+div.hiedBox{
+  position: absolute;
+  border: 1px solid #ddd;
+  width: 352px;
+  height: 340px;
+  top: -1px;
+  left: 100%;
+  z-index: 1;
+  background-color: white;
+  padding: 15px 10px;
+  box-sizing: border-box;
+}
+.show{
+  display: block;
+}
+.hied{
+  display: none;
+}
+div.hiedBox ul{
+  width: 100%;
+  height: 100%;
+}
+div.hiedBox ul li{
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 0;
+}
+span.topTen{
+  float: left;
+  width: 30px;
+  font-size: 20px;
+  font-style: italic;
+  font-family: Letter Gothic Std, Verdana, Geneva, sans-serif;
+  text-align: right;
+  color: #aaa;
+  font-weight: bold;
+}
+div.hiedBox ul li:nth-child(-n+3):nth-child(n+1) .topTen{
+  color: #FFA800;
+}
+div.hiedBox ul li:nth-child(-n+3):nth-child(n+1) .local{
+  color: #FFA800;
+}
+strong.local{
+  font-weight: inherit;
+  padding: 0 15px;
+}
+strong.local:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  color: #FFA800;
+}
+span.describe{
+  color: #999999;
+  font-size: 12px;
+}
+span.describe:hover{
+  text-decoration: underline;
+  cursor: pointer;
+  color: #FFA800;
+}
+
+div.hiedBox2{
+  width: 492px;
+  height: 340px;
+  position: absolute;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  top: -1px;
+  left: 100%;
+  z-index: 1;
+  background-color: white;
+  padding: 5px 10px;
+}
+div.hiedBox2 dl{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+div.hiedBox2 dl dt{
+  display: inline;
+  width: 60px;
+  height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  cursor: default;
+  margin: 15px 15px 0 10px;
+}
+div.hiedBox2 dl dd{
+  margin: 10px 0 0 0;
+}
+div.hiedBox2 dl dd a{
+  display: inline-block;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 5px;
+  margin-right: 15px;
+}
+div.hiedBox2 dl dd a:hover{
+  color: #FFA800;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 
 /***搜索框***/
 div.search_box {
@@ -238,6 +352,7 @@ div.mainContent_leftTitle {
 }
 
 div.region {
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -261,13 +376,54 @@ div.region span {
 div.region i {
   float: right;
   margin-top: 20px;
-  border-top: 4px solid #999;
   border-left: 4px dashed transparent;
   border-right: 4px dashed transparent;
   font-size: 0;
   overflow: hidden;
 }
+div.guonei:hover,.guowai:hover,.theme:hover{
+  cursor: pointer;
+}
+div.regionHied{
+  position: absolute;
+  border: 1px solid #e5e5e5;
+  top: 55px;
+  background-color: white;
+  width: 452px;
+  padding:20px;
+}
+div.regionHied ul{
 
+}
+div.regionHied ul li{
+  display: inline;
+  float: left;
+  margin: 0 15px;
+  height: 30px;
+  line-height: 30px;
+}
+div.regionHied ul li span{
+  content: '';
+  float: right;
+  margin: 10px 0 0 15px;
+  width: 1px;
+  height: 13px;
+  background-color: #eee;
+}
+
+div.regionHied ul li a{
+
+}
+.click{
+  color: #FF9D00;
+  border-bottom: 3px solid #FF9D00;
+}
+.clickI{
+  border-top: 4px solid #FF9D00;
+}
+.clicks{
+  border-top: 4px solid #999;
+}
 /* div.Ranking{
 
 }
@@ -368,6 +524,10 @@ ul.postType1 {
   padding-bottom: 40px;
   border-bottom: 1px solid #ddd;
 }
+ul.postType1:hover,ul.postType1:hover .postTitle{
+  background-color: #f8f8f8;
+  color: #FFA800;
+}
 
 div.user_span {
   display: inline-block;
@@ -458,6 +618,10 @@ div.postType {
   margin-bottom: 20px;
   padding-bottom: 40px;
 
+}
+div.postType:hover,div.postType:hover .postTitle{
+  background-color: #f8f8f8;
+  color: #FFA800;
 }
 
 dl.content_dl {

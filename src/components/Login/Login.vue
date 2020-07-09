@@ -23,10 +23,10 @@
 							</div>
 						</div>
 						<div class="form-field" v-else>
-							<div class="login-err" v-if="loginErr">账号密码错误，请重试或找回密码</div>
+							<div class="login-err" v-if="loginErr">{{ErrText}}</div>
 							<div class="login-err2" v-if="loginErr2">{{Err2Text}}</div>
 							<!-- <form action="#" method="post"> -->
-								<input type="text" class="tp" placeholder="您的邮箱/手机号" v-model="username">
+								<input type="text" class="tp" placeholder="您的手机号" v-model="username">
 								<input type="password" class="tp" placeholder="您的密码" v-model="pwd">
 								<p><a href="#">忘记密码</a></p>
 								<input type="submit" class="sub" value="登陆" @click="Login" />
@@ -107,10 +107,10 @@ export default {
 		  windowShow: true,
 		  ErrText: '',
 		  Err2Text: '',
-		  // rl数据
+		  // 登陆数据
 		  username: '',
 		  pwd:'',
-
+      // 注册数据
 		  phone:'',
 		  name:'',
 		  regPwd:'',
@@ -143,6 +143,7 @@ export default {
 	  	this.MouseOn = index;
 	  },
 	  Login(){
+      // 登陆时需用注册手机号码登陆
 		if(this.username == ''|this.username == null){
 			this.loginErr2 = true;
 			this.Err2Text = '帐号不能为空';
@@ -153,18 +154,19 @@ export default {
 			}else{
 				let sql_name = localStorage.getItem('1'+this.phone);
 				let sql_pwd = localStorage.getItem('0'+this.phone);
-				if(this.phone != sql_name){
-					alert('请先注册');
+				if(this.username != sql_name){
+          this.loginErr2 = true;
+					this.Err2Text = "请先注册";
 					this.rlShow = false;
 				}else{
 					if(this.phone == sql_name && this.pwd == sql_pwd){
-						alert('登陆成功');
 						this.$emit("getData", false);
 						localStorage.setItem('login',this.name);
 					}else{
 						this.username = '';
-						this.pwd = '';
-						alert('用户名或密码错误');
+            this.pwd = '';
+            this.loginErr = true;
+						this.ErrText = '账号密码错误，请重试或找回密码';
 					}
 				}
 			}
@@ -181,8 +183,10 @@ export default {
 			}else{
 				const sql_name = localStorage.getItem('1'+this.phone);
 				if(sql_name != null){
-					alert('你已注册，请登录');
-          this.windowShow = true;
+          this.ErrText = '您已注册,请登录';
+          this.loginErr = true;
+          this.loginErr2 = false;
+          this.rlShow = true;
 				}else{
 					this.windowShow = false;
 				}
@@ -211,12 +215,13 @@ export default {
 		  					this.Err2Text = '短信验证码错误';
 		  				}else{
 		  					const sql_name = localStorage.getItem('1'+this.phone);
-							localStorage.setItem('1'+this.phone,this.phone);
-							localStorage.setItem('0'+this.phone,this.pwd);
-							localStorage.setItem('2'+this.phone,this.name);
-							alert('注册成功，请登录');
-							this.windowShow = true;
-							this.rlShow = true;
+                localStorage.setItem('1'+this.phone,this.phone);
+                localStorage.setItem('0'+this.phone,this.pwd);
+                this.loginErr = true;
+                this.ErrText = '注册成功，请登录';
+                this.loginErr2 = false;
+                this.windowShow = true;
+                this.rlShow = true;
 		  				}
 		  			}
 		  		}

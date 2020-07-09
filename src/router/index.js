@@ -19,6 +19,7 @@ import Ticket from '@/views/Ticket'
 import Oneway from '@/components/ticket/Oneway'
 import Twoway from '@/components/ticket/Twoway'
 import Free from '../views/Free'
+
 Vue.use(Router)
 
 export default new Router({
@@ -64,11 +65,13 @@ export default new Router({
                 // }]
 
             },
+           
             {
                 path: '/destination',
                 name: 'Destination',
                 component: Destination
             },
+
             {
                 path: '/free',
                 name: 'Free',

@@ -11,10 +11,10 @@
           </div>
           <ul class="head_nav">
             <li class="head_nav_index">
-              <router-link to="/">首页</router-link>
+              <router-link to="/" class="head-nav-active">首页</router-link>
             </li>
             <li class="head_nav_place">
-              <router-link to="/Destination">目的地</router-link>
+              <router-link to="/Destination" >目的地</router-link>
             </li>
             <li class="head_nav_gonglve">
               <router-link to="/Strategy">旅游攻略</router-link>
@@ -133,7 +133,7 @@
           </div>
         </div>
       </div>
-      <div class="main">
+      <div class="main" >
         <router-view />
       </div>
       <div class="mfw-container clearfix">

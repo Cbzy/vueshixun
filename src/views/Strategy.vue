@@ -13,8 +13,8 @@
             </li>
           </ul>
           <div class="hiedBox" :class="{show:selShow!=0,hied:selShow==0}" v-on:mouseenter="selShow=i" v-on:mouseleave="selShow=0">
-            <ul v-for="(item,index) in selectedList" v-if="index == selShow-1 && selShow == index+1">
-              <li v-for="(items,indexs) in item.local">
+            <ul v-for="(item,index) in selectedList" v-if="index == selShow-1 && selShow == index+1" :key="index">
+              <li v-for="(items,indexs) in item.local" :key="indexs">
                 <span class="topTen">{{items.lid}}</span>
                 <strong class="local">{{items.region}}</strong>
                 <span class="describe">{{items.describe}}</span>
@@ -100,7 +100,7 @@
         <div class="page" v-if="this.dataList.length > 1">
           <ul>
             <!-- <li @click="gotoPage(prevIndex)">&lt;</li> -->
-            <li v-for="(item,index) in dataList" @click="gotoPage(index)" :class="{'current':currentIndex == index}" :keys="index">  {{index+1}}</li>
+            <li v-for="(item,index) in dataList" @click="gotoPage(index)" :class="{'current':currentIndex == index}" :key="index">  {{index+1}}</li>
             <!-- <li @click="gotoPage(nextIndex)">&gt;</li> -->
           </ul>
         </div>
@@ -129,8 +129,8 @@
             主题
           </div>
           <div class="regionHied" :class="{show:click!=0,hied:click==0}">
-            <ul v-for="(item,index) in regList" v-if="click && index==click-1">
-              <li v-for="(items,indexs) in item.content">
+            <ul v-for="(item,index) in regList" v-if="click && index==click-1" :key="index">
+              <li v-for="(items,indexs) in item.content" :key="indexs">
                 <a href="#">{{items.province}}</a>
                 <span></span>
               </li>

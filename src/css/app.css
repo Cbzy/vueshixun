@@ -91,9 +91,19 @@ dd{
     color: #ff9d00;
     border-bottom-color:#ff9d00 ;
 }
+/* .head-nav .head-nav-active a {
+    background-color: #ff9d00;
+    color: #fff!important;
+    text-decoration: none;
+} */
 .head_nav a.router-link-exact-active {
     color: #fff!important;
     background-color:#ff9d00 ;
+    text-decoration: none;
+}
+.head-nav  a {
+    background-color: #ff9d00;
+    color: #fff!important;
     text-decoration: none;
 }
 .head_nav_dropdown{
@@ -568,6 +578,9 @@ dd{
     cursor: pointer;
     overflow: hidden;
 }
+.slide-ol .active{
+    background-color: #ff9d00;
+}
 .gonglve-item{
     margin-bottom: 10px;
 }
@@ -827,6 +840,7 @@ dd{
 /* 尾部 */
 .homefooter{
     width: 100%;
+    min-width: 1124px;
     height: 502px;
     clear: both;
     background-color: #3c3c3c;

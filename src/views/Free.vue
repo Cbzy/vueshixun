@@ -1,5 +1,10 @@
 <template>
     <div class="free" style="margin: 0 auto;">
+      <div class="crumb">
+        <a href="/">首页</a> &gt;
+        <a href="/gonglve/ziyouxing/mdd_12788/">青海</a>  &gt;
+        <em>自由行攻略</em>
+    </div>
       <div class="local-con clearfix">
         <div class="sideL">
           <div class="l-topic">
@@ -31,7 +36,7 @@
                   </p>
                 </div>
                 <div class="contact user-home">
-                  <a href="/u/49537946.html" target="_blank">
+                  <a href="" target="_blank">
                   <i></i><p>TA的窝</p>
                   </a>
                 </div>
@@ -382,17 +387,17 @@
                       <div class="side_inner _j_sticky_block">
                         <div class="_j_other_column">
                         <div class="bar-sar clearfix">
-                          <a href="javascript:;" class="_j_goto_comment" title="评论"><i class="i01"></i><em>0</em></a>
+                          <a href="javascript:;" class="_j_goto_comment" title="评论"><i class="el-icon-ice-cream-square i01"></i><em>0</em></a>
                             <div class="bs_collect">
-                              <a href="javascript:void(0);" title="收藏" class="bs_btn btn-collect" data-id="342144"><i class="collect_icon i02 " data-uid=""></i>
+                              <a href="javascript:void(0);" title="收藏" class="bs_btn btn-collect" data-id="342144"><i class="el-icon-star-off i02 " data-uid=""></i>
                               <em class="favorite_num">4</em>
                               </a>
                             </div>
                             <div class="bs_share">
-                              <a href="javascript:;" title="分享" class="btn-share bs_btn"><i class="i03"></i><em>1</em></a>
+                              <a href="javascript:;" title="分享" class="btn-share bs_btn"><i class="el-icon-share i03"></i><em>1</em></a>
                             </div>
-                            <a href="javascript:;" class="_j_like_btn" title="点赞" style="display:none"><i class="i04 "></i><em class="like_num">0</em></a>
-                            <a href="javascript:;" class="_j_support_btn" title="顶"><i class="i05 "></i><em class="support_num">4</em></a>
+                            <a href="javascript:;" class="_j_like_btn" title="点赞" style="display:none"><i class=" i04 "></i><em class="like_num">0</em></a>
+                            <a href="javascript:;" class="_j_support_btn" title="顶"><i class="el-icon-loading i05 "></i><em class="support_num">4</em></a>
                         </div>
 
                         <div class="bs_pop clearfix" style="display: none;">
@@ -406,38 +411,38 @@
                       <div class="sideR_con">
                         <div class="section">
                           <div class="top" id="side_0">
-                            <i class=""></i>
+                            <i class="el-icon-coffee"></i>
                             <a class="_j_cataloglink" data-index="2" href="javascript:void(0);">行前准备</a>
                     </div>
                 </div>
 
                 <div class="section">
                   <div class="top" id="side_0">
-                    <i class=""></i>
+                    <i class="el-icon-ice-tea"></i>
                     <a class="_j_cataloglink" data-index="3" href="javascript:void(0);">最佳旅行时间</a>
                   </div>
                 </div>
                 <div class="section">
                   <div class="top" id="side_0">
-                    <i class=""></i>
+                    <i class="el-icon-ice-drink"></i>
                       <a class="_j_cataloglink" data-index="4" href="javascript:void(0);">‍美食</a>
                     </div>
                 </div>
                 <div class="section">
                   <div class="top" id="side_0">
-                    <i class=""></i>
+                    <i class="el-icon-milk-tea"></i>
                       <a class="_j_cataloglink" data-index="5" href="javascript:void(0);">必玩景点</a>
                     </div>
                 </div>
                 <div class="section">
                     <div class="top" id="side_0">
-                        <i class=""></i>
+                        <i class="el-icon-dessert"></i>
                         <a class="_j_cataloglink" data-index="15" href="javascript:void(0);">交通方式</a>
                     </div>
                 </div>
                 <div class="section">
                     <div class="top" id="side_0">
-                        <i class=""></i>
+                        <i class="el-icon-cold-drink"></i>
                         <a class="_j_cataloglink" data-index="16" href="javascript:void(0);">结语</a>
                     </div>
                 </div>
@@ -470,7 +475,8 @@
                 <div class="info">
                   <h3>穿越青藏线，从西宁到拉萨只需要6天（附详细行程安排）</h3>
                   <div class="sub">
-                    <p>一、写在前面的话</p>                                                    <p>二、西宁进藏，哪些经典景点不容错过？</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                    <p>一、写在前面的话</p>
+                    <p>二、西宁进藏，哪些经典景点不容错过？</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
                 </div>
             </a>
         </li>
@@ -486,13 +492,14 @@
             </a>
         </li>
         <li>
-            <a target="_blank" title="六月端午IN青海—清凉醉美又好玩" href="/gonglve/ziyouxing/272551.html">
+            <a target="_blank" title="六月端午IN青海—清凉醉美又好玩" href="/views/Free.vue">
               <div class="img">
                 <img src="https://b1-q.mafengwo.net/s13/M00/69/27/wKgEaVzdF0SAA8b2AAJFvv4G4_Y27.jpeg?imageMogr2%2Fthumbnail%2F%21300x166r%2Fgravity%2FCenter%2Fcrop%2F%21300x166%2Fquality%2F100" alt=""></div>
                 <div class="info">
                   <h3>六月端午IN青海—清凉醉美又好玩</h3>
                     <div class="sub">
-                      <p>端午节假期时长</p>                                                    <p>端午假期在西北玩什么</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                      <p>端午节假期时长</p>
+                      <p>端午假期在西北玩什么</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
                 </div>
             </a>
         </li>

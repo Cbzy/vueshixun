@@ -19,13 +19,13 @@
            </div>
            <div class="content">
                <ul>
-                    <li>
+                    <li v-for="(item,index) in WeekHot" :key="index" >
                     <div class="cap1">
-                        <img src="../../assets/travel/CoUBGV2oOp-AXLpKAAJI2SSazu851.jpeg" alt="">
+                        <img :src="item.img" alt="" width="238px" height="134px">
                     </div>
-                                          <!-- <div class="caption">美到窒息的海+海岛控的梦想之地·深圳往返大溪地8天6晚自由行（免费行程路书+咨询可领优惠券+24小时中文服务+全程管家服务+可开免签证明+可安排当地游）</div>  -->
+                    <div class="caption">{{item.main}}</div>
 
-                        <div class="cards">￥34699<i style="font-size:14px;font-style:normal">起</i><i style="float: right;padding-top: 8px;font-size: 12px;color: #666;font-style:normal;line-height:34px">店铺111111</i></div>
+                        <div class="cards">￥{{item.money}}<i style="font-size:14px;font-style:normal">起</i><i style="padding-left:58px;float: right;padding-top: 8px;font-size: 12px;color: #666;font-style:normal;line-height:34px">店铺:{{item.shop}}</i></div>
                     </li>
                     <li>
                         <div class="cap1"></div>
@@ -40,12 +40,235 @@
                </ul>
            </div>
         </div>
-        
+        <div class="list">
+            <div class="title">
+
+
+                <h2 style="color:#fb6720;font-weight: normal;font-size:24px;line-height:41px;">
+                    休闲去哪儿
+                </h2>
+                <h3 style="margin-left: 10px;font-size: 14px;color: #999;line-height:51px;font-weight: normal;">
+                   
+                </h3>
+                <div style="width:790px">
+                     <a href="#" style="float:right;line-height:51px;font-size: 12px;color: #999;"><i style="width: 14px;height: 14px;display: inline-block;margin-right: 4px;vertical-align: middle;"></i>换一换</a>
+                </div>
+               
+           
+           
+           </div>
+           <div class="content">
+               <ul>
+                    <li v-for="(item,index) in Where" :key="index" >
+                    <div class="cap1">
+                        <img :src="item.img" alt="" width="238px" height="134px">
+                    </div>
+                    <div class="caption">{{item.main}}</div>
+
+                        <div class="cards">￥{{item.money}}<i style="font-size:14px;font-style:normal">起</i><i style="padding-left:58px;float: right;padding-top: 8px;font-size: 12px;color: #666;font-style:normal;line-height:34px">店铺:{{item.shop}}</i></div>
+                    </li>
+                    <li>
+                        <div class="cap1"></div>
+                    </li>
+                    <li>
+
+                    </li>
+                    <li>
+
+                    </li>
+
+               </ul>
+           </div>
+          
+           
+        </div>
+        <div class="list">
+            <div class="title">
+
+
+                <h2 style="color:#fb6720;font-weight: normal;font-size:24px;line-height:41px;">
+                    和你去看海
+                </h2>
+                <h3 style="margin-left: 10px;font-size: 14px;color: #999;line-height:51px;font-weight: normal;">
+                   
+                </h3>
+                <div style="width:790px">
+                     <a href="#" style="float:right;line-height:51px;font-size: 12px;color: #999;"><i style="width: 14px;height: 14px;display: inline-block;margin-right: 4px;vertical-align: middle;"></i>换一换</a>
+                </div>
+               
+           
+           
+           </div>
+           <div class="content">
+               <ul>
+                    <li v-for="(item,index) in Sea" :key="index" >
+                    <div class="cap1">
+                        <img :src="item.img" alt="" width="238px" height="134px">
+                    </div>
+                    <div class="caption">{{item.main}}</div>
+
+                        <div class="cards">￥{{item.money}}<i style="font-size:14px;font-style:normal">起</i><i style="padding-left:58px;float: right;padding-top: 8px;font-size: 12px;color: #666;font-style:normal;line-height:34px">店铺:{{item.shop}}</i></div>
+                    </li>
+                    <li>
+                        <div class="cap1"></div>
+                    </li>
+                    <li>
+
+                    </li>
+                    <li>
+
+                    </li>
+
+               </ul>
+           </div>
+          
+           
+        </div>
+        <div class="list">
+            <div class="title">
+
+
+                <h2 style="color:#fb6720;font-weight: normal;font-size:24px;line-height:41px;">
+                    邮轮度假
+                </h2>
+                <h3 style="margin-left: 10px;font-size: 14px;color: #999;line-height:51px;font-weight: normal;">
+                   
+                </h3>
+                <div style="width:790px">
+                     <a href="#" style="float:right;line-height:51px;font-size: 12px;color: #999;"><i style="width: 14px;height: 14px;display: inline-block;margin-right: 4px;vertical-align: middle;"></i>换一换</a>
+                </div>
+               
+           
+           
+           </div>
+           <div class="content">
+               <ul>
+                    <li v-for="(item,index) in Liner" :key="index" >
+                    <div class="cap1">
+                        <img :src="item.img" alt="" width="238px" height="134px">
+                    </div>
+                    <div class="caption">{{item.main}}</div>
+
+                        <div class="cards">￥{{item.money}}<i style="font-size:14px;font-style:normal">起</i><i style="padding-left:58px;float: right;padding-top: 8px;font-size: 12px;color: #666;font-style:normal;line-height:34px">店铺:{{item.shop}}</i></div>
+                    </li>
+                    <li>
+                        <div class="cap1"></div>
+                    </li>
+                    <li>
+
+                    </li>
+                    <li>
+
+                    </li>
+
+               </ul>
+           </div>
+          
+           
+        </div>
+        <div class="list">
+            <div class="title">
+
+
+                <h2 style="color:#fb6720;font-weight: normal;font-size:24px;line-height:41px;">
+                    扫货圣地
+                </h2>
+                <h3 style="margin-left: 10px;font-size: 14px;color: #999;line-height:51px;font-weight: normal;">
+                   
+                </h3>
+                <div style="width:790px">
+                     <a href="#" style="float:right;line-height:51px;font-size: 12px;color: #999;"><i style="width: 14px;height: 14px;display: inline-block;margin-right: 4px;vertical-align: middle;"></i>换一换</a>
+                </div>
+               
+           
+           
+           </div>
+           <div class="content">
+               <ul>
+                    <li v-for="(item,index) in Shop" :key="index" >
+                    <div class="cap1">
+                        <img :src="item.img" alt="" width="238px" height="134px">
+                    </div>
+                    <div class="caption">{{item.main}}</div>
+
+                        <div class="cards">￥{{item.money}}<i style="font-size:14px;font-style:normal">起</i><i style="padding-left:58px;float: right;padding-top: 8px;font-size: 12px;color: #666;font-style:normal;line-height:34px">店铺:{{item.shop}}</i></div>
+                    </li>
+                    <li>
+                        <div class="cap1"></div>
+                    </li>
+                    <li>
+
+                    </li>
+                    <li>
+
+                    </li>
+
+               </ul>
+           </div>
+          
+           
+        </div>
+         
     </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
-    name:'WeekHot'
+    name:'WeekHot',
+    data(){
+      return{
+        WeekHot :[],
+        Where:[],
+        Sea:[],
+        Liner:[],
+        Shop:[]
+      }
+    },
+    mounted() {
+    this.getData();
+    this.getData2();
+    this.getData3();
+    this.getData4();
+    this.getData5();
+
+  },
+  methods: {
+    getData() {
+      axios.get('../../../static/WeekHot.json').then(response => {
+        this.WeekHot = response.data;
+      }, response => {
+        console.log("get weekHot is error");
+      });
+    },
+    getData2() {
+      axios.get('../../../static/Where.json').then(response => {
+        this.Where = response.data;
+      }, response => {
+        console.log("get Where is error");
+      });
+    },
+        getData3() {
+      axios.get('../../../static/Sea.json').then(response => {
+        this.Sea = response.data;
+      }, response => {
+        console.log("get Sea is error");
+      });
+    },
+        getData4() {
+      axios.get('../../../static/Liner.json').then(response => {
+        this.Liner = response.data;
+      }, response => {
+        console.log("get Liner is error");
+      });
+    },
+        getData5() {
+      axios.get('../../../static/Shop.json').then(response => {
+        this.Shop = response.data;
+      }, response => {
+        console.log("get Shop is error");
+      });
+    }
+}
 }
 </script>
 <style scoped>
@@ -74,21 +297,23 @@ export default {
     .content li{
         width: 240px;
         height: 234px;
-        background: #eee;
+        background: #fff;
         margin: 0 12px 15px 6px;
+        position:relative;
     }
 
     .cap1{
         width: 238px;
-         height:186px; 
+         height:134px; 
         background-size: 238px 186px;
          overflow: hidden;
     }
 
     .caption{
+        top:148px;
         display: flex;
-        width: 230px;
-        height: 80px;
+        width: 234px;
+        height: 40px;
         background: #fff;
         font-weight: normal;
         color: #000;
@@ -96,21 +321,27 @@ export default {
         overflow: hidden;
         padding-bottom: 6px;
         font-size: 14px;
-        padding-left: 5px;
+        position:absolute;
+        padding-left: 4px;
+        /* padding-left: 5px;
         padding-right: 5px;
         padding-top:7px ;
         
-         margin-top:140px ; 
+         margin-top:140px ;  */
     }
     .caption:hover{
-        /* margin-top:100px ;
-        transition: all .5s; */
+        top:102px;
+        height: 80px;
+        transition: all .5s;
     }
 
     .cards{
+        position:absolute;
+         top:190px;
         font-size: 22px;
         color: #ff8a00;
         height: 29px;
         line-height: 43px;
+
     }
 </style>

@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,        
+        "img":"https://b1-q.mafengwo.net/s15/M00/42/84/CoUBGV2oOp-AXLpKAAJI2SSazu851.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100",
+        "main":"美到窒息的海+海岛控的梦想之地·深圳往返大溪地8天6晚自由行（免费行程路书+咨询可领优惠券+24小时中文服务+全程管家服务+可开免签证明+可安排当地游）",
+        "money":34699,
+        "shop":"奢游国际"
+    },
+    {
+        "id":2,  
+        "img":"https://p1-q.mafengwo.net/s12/M00/65/EA/wKgED1v_WGaAeZ6CAAN4_HilzRs346.gif?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100",
+        "main":"趣滑雪·乐温泉～杭州直飞长春/长白山5日自由行（净月潭喜来登/万达假日/酒店门对门直通车+水乐园/雪圈公园+度假助理/每日双早+免费接送机）",
+        "money":4469,
+        "shop":"海航国旅"
+    },
+    {
+        "id":3,
+        "img":"https://p1-q.mafengwo.net/s11/M00/E8/D9/wKgBEFtOu7-AB3tXAAJzCMYPvno59.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100",
+        "main":"武汉直飞厦门4天3晚自由行（五星/海景/网红/等多款酒店任选+住一晚鼓浪屿磐诺假日·自助早餐+专车接送机+赠鼓浪屿船票+帆船出海体验/鹭江夜游）",
+        "money":"3300",
+        "shop":"GO爱旅行"
+    },
+    {
+        "id":"4",
+        "img":"https://n1-q.mafengwo.net/s15/M00/41/2F/CoUBGV4YAxCAMrflAAXDfaFMzlQ15.jpeg?imageMogr2%2Fthumbnail%2F%21476x268r%2Fgravity%2FCenter%2Fcrop%2F%21476x268%2Fquality%2F100",
+        "main":"赏雪樱花·重庆直飞日本本州经典纯玩樱花祭6日跟团游（入住特色温泉酒店+冰雪乐园滑雪体验+特色日式料理+东京充足自由时间血拼+全程纯玩零自费）",
+        "money":"5399",
+        "shop":"私迈发现"
+    }
+]

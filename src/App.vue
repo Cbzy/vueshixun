@@ -324,7 +324,7 @@ export default {
       loginShow: false,
       rShow: true,
 
-      username: localStorage.getItem("login")
+      username: localStorage.getItem("isLogin")
     };
   },
   mounted() {

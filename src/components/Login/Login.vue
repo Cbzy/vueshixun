@@ -152,8 +152,8 @@ export default {
 				this.loginErr2 = true;
 				this.Err2Text = '密码不能为空';
 			}else{
-				let sql_name = localStorage.getItem('username-'+this.phone);
-				let sql_pwd = localStorage.getItem('password-'+this.phone);
+				let sql_name = localStorage.getItem('username-'+this.username);
+				let sql_pwd = localStorage.getItem('password-'+this.username);
 				if(this.username != sql_name){
 					this.loginErr2 = true;
 					this.Err2Text = "请先注册";

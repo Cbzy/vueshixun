@@ -152,20 +152,20 @@ export default {
 				this.loginErr2 = true;
 				this.Err2Text = '密码不能为空';
 			}else{
-				let sql_name = localStorage.getItem('1'+this.phone);
-				let sql_pwd = localStorage.getItem('0'+this.phone);
+				let sql_name = localStorage.getItem('username-'+this.username);
+				let sql_pwd = localStorage.getItem('password-'+this.username);
 				if(this.username != sql_name){
-          this.loginErr2 = true;
+					this.loginErr2 = true;
 					this.Err2Text = "请先注册";
 					this.rlShow = false;
 				}else{
-					if(this.phone == sql_name && this.pwd == sql_pwd){
+					if(this.username == sql_name && this.pwd == sql_pwd){
 						this.$emit("getData", false);
-						localStorage.setItem('login',this.name);
+						localStorage.setItem('isLogin',localStorage.getItem('name-'+this.username));
 					}else{
 						this.username = '';
-            this.pwd = '';
-            this.loginErr = true;
+						this.pwd = '';
+						this.loginErr = true;
 						this.ErrText = '账号密码错误，请重试或找回密码';
 					}
 				}
@@ -181,7 +181,7 @@ export default {
 				this.loginErr2 = true;
 				this.Err2Text = '手机号码格式不正确';
 			}else{
-				const sql_name = localStorage.getItem('1'+this.phone);
+				const sql_name = localStorage.getItem('name-'+this.phone);
 				if(sql_name != null){
           this.ErrText = '您已注册,请登录';
           this.loginErr = true;
@@ -214,14 +214,15 @@ export default {
 		  					this.loginErr2 = true;
 		  					this.Err2Text = '短信验证码错误';
 		  				}else{
-		  					const sql_name = localStorage.getItem('1'+this.phone);
-                localStorage.setItem('1'+this.phone,this.phone);
-                localStorage.setItem('0'+this.phone,this.pwd);
-                this.loginErr = true;
-                this.ErrText = '注册成功，请登录';
-                this.loginErr2 = false;
-                this.windowShow = true;
-                this.rlShow = true;
+		  					const sql_name = localStorage.getItem('username-'+this.phone);
+							localStorage.setItem('username-'+this.phone,this.phone);
+              localStorage.setItem('password-'+this.phone,this.regPwd);
+              localStorage.setItem('name-'+this.phone,this.name);
+							this.loginErr = true;
+							this.ErrText = '注册成功，请登录';
+							this.loginErr2 = false;
+							this.windowShow = true;
+							this.rlShow = true;
 		  				}
 		  			}
 		  		}

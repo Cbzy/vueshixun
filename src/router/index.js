@@ -18,6 +18,7 @@ import HomeHot from '../views/HomeHot.vue'
 import Ticket from '@/views/Ticket'
 import Oneway from '@/components/ticket/Oneway'
 import Twoway from '@/components/ticket/Twoway'
+import Hotel from '@/views/Hotel'
 import Free from '../views/Free'
 import HomeJourney from '@/components/HomeJourney.vue'
 import HomeTicket from '@/components/HomeTicket.vue'
@@ -27,8 +28,8 @@ import HomeAll from '@/components/HomeAll.vue'
 Vue.use(Router)
 
 export default new Router({
-    routes: [
-        {
+   
+    routes: [{
             path: '',
             redirect: '/home'
         },
@@ -89,6 +90,24 @@ export default new Router({
         {
             path: 'homeJourney',
             component: HomeJourney
+        },
+        {
+            path: '/destination',
+            name: 'Destination',
+            component: Destination
+        },
+
+
+            // }, {
+            //     path: "twoway",
+            //     component: Twoway
+            // }]
+
+    
+        {
+            path: "/hotel",
+            name: 'Hotel',
+            component: Hotel,
         },
         {
             path: '/destination',

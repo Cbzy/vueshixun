@@ -53,7 +53,7 @@
               <router-link to="/ticket">机票火车票</router-link>
             </li>
             <li class="head_nav_hotel">
-              <router-link to="/c">订酒店</router-link>
+              <router-link to="/hotel">订酒店</router-link>
             </li>
             <li class="head_nav_community">
               <div class="drop_toggle">
@@ -346,7 +346,7 @@ export default {
       loginShow: false,
       rShow: true,
 
-      username: localStorage.getItem("login")
+      username: localStorage.getItem("isLogin")
     };
   },
   mounted() {

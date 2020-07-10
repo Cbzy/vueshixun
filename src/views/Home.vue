@@ -54,7 +54,48 @@
       </div>
       <a href="#" class="show-more">历历在目</a>
     </div>
-    
+    <div class="search-container">
+        <div class="search-group">
+          <div class="searchtab">
+            <ul class="clearfix">
+              <li class="tab-selected">
+                <router-link to="homeAll">
+                <i></i>
+                全部
+                </router-link>
+              </li>
+              <li class="">
+                <router-link to="">
+                <i></i>
+                酒店
+                </router-link>
+              </li>
+              <li class="">
+                <router-link to="">
+                <i></i>
+                目的地
+                </router-link>
+              </li>
+              <li class="">
+                <router-link to="">
+                <i></i>
+                去旅行
+                </router-link>
+              </li>
+              <li class="">
+                <router-link to="">
+                <i></i>
+                机票
+                </router-link>
+              </li>
+            </ul>
+          </div>
+           <div class="searchbar">
+          <router-view/>
+        </div>
+        </div>
+       
+    </div>
   </div>
 </template>
 
@@ -67,7 +108,7 @@ export default {
         {
           id: "1",
           img:
-            "https://b3-q.mafengwo.net/s13/M00/71/D6/wKgEaVyd7i6AFjCjAADni5x-vvY89.jpeg",
+            "https://n1-q.mafengwo.net/s16/M00/F1/0A/CoUBUl78p1aAS64AACnE_Ye2sto840.png?imageMogr2%2Finterlace%2F1",
           day: "2",
           monthly: "July",
           year: "2020",

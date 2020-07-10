@@ -19,105 +19,129 @@ import Ticket from '@/views/Ticket'
 import Oneway from '@/components/ticket/Oneway'
 import Twoway from '@/components/ticket/Twoway'
 import Free from '../views/Free'
-
+import HomeJourney from '@/components/HomeJourney.vue'
+import HomeTicket from '@/components/HomeTicket.vue'
+import HomeDestination from '@/components/HomeDestination.vue'
+import HomeHotel from '@/components/HomeHotel.vue'
+import HomeAll from '@/components/HomeAll.vue'
 Vue.use(Router)
 
 export default new Router({
-        routes: [
-            {
+    routes: [
+        {
+            path: '',
+            redirect: '/home'
+        },
+        {
+            path: '/home',
+            components: {
+                default: Home,
+                HomeNav,
+                HomeAside,
+                HomeWrapper,
+            },
+            children: [{
                 path: '',
-                redirect: '/home'
+                redirect: 'hot'
             },
             {
-                path: '/home',
-                components: {
-                    default: Home,
-                    HomeNav,
-                    HomeAside,
-                    HomeWrapper
-                },
-                children: [{
-                        path: '',
-                        redirect: 'hot'
-                    },
-                    {
-                        path: 'hot',
-                        component: HomeHot
-                    },
-                    {
-                        path: 'new',
-                        component: HomeNew
-                    }
-                ]
+                path: 'hot',
+                component: HomeHot
             },
             {
-                path: "/ticket",
-                name: 'Ticket',
-                //redirect: 'oneway', //
-                component: Ticket,
-                // children: [{
-                //     path: "oneway",
-                //     component: Oneway,
+                path: 'new',
+                component: HomeNew
+            },
+          
+            ]
+        },
+        {
+            path: "/ticket",
+            name: 'Ticket',
+            //redirect: 'oneway', //
+            component: Ticket,
+            // children: [{
+            //     path: "oneway",
+            //     component: Oneway,
 
-                // }, {
-                //     path: "twoway",
-                //     component: Twoway
-                // }]
+            // }, {
+            //     path: "twoway",
+            //     component: Twoway
+            // }]
 
-            },
-           
-            {
-                path: '/destination',
-                name: 'Destination',
-                component: Destination
-            },
+        },
+        {
+            path: 'homeAll',
+            component: HomeAll
+        },
+        {
+            path: 'homeHotel',
+            component: HomeHotel
+        },
+        {
+            path: 'homeDestination',
+            component: HomeDestination
+        },
+        {
+            path: 'homeTicket',
+            component: HomeTicket
+        },
+        {
+            path: 'homeJourney',
+            component: HomeJourney
+        },
+        {
+            path: '/destination',
+            name: 'Destination',
+            component: Destination
+        },
 
-            {
-                path: '/free',
-                name: 'Free',
-                component: Free
+        {
+            path: '/free',
+            name: 'Free',
+            component: Free
+        },
+        {
+            path: '/strategy',
+            name: 'Strategy',
+            component: Strategy,
+            // children: [{
+            //     path: "/strategy/free",
+            //     component: Free
+            // },]
+        },
+        {
+            path: '/travel',
+            component: Travel,
+            children: [{
+                path: "/travel/sales",
+                component: Sales
             },
             {
-                path: '/strategy',
-                name: 'Strategy',
-                component: Strategy,
-                // children: [{
-                //     path: "/strategy/free",
-                //     component: Free
-                // },]
+                path: '/travel/teamtravel',
+                component: TeamTravel
             },
             {
-                path: '/travel',
-                component: Travel,
-                children: [{
-                        path: "/travel/sales",
-                        component: Sales
-                    },
-                    {
-                        path: '/travel/teamtravel',
-                        component: TeamTravel
-                    },
-                    {
-                        path: '/travel/localdeals',
-                        component: Localdeals
-                    },
-                    {
-                        path: '/travel/wf',
-                        component: Wf
-                    },
-                    {
-                        path: '/travel/visa',
-                        component: Visa
-                    },
-                    {
-                        path: '/travel/liner',
-                        component: Liner
-                    },
-                    {
-                        path: "",
-                        redirect: "/travel/sales"
-                    }
-                ]
+                path: '/travel/localdeals',
+                component: Localdeals
             },
-        ]
-    })
+            {
+                path: '/travel/wf',
+                component: Wf
+            },
+            {
+                path: '/travel/visa',
+                component: Visa
+            },
+            {
+                path: '/travel/liner',
+                component: Liner
+            },
+            {
+                path: "",
+                redirect: "/travel/sales"
+            }
+            ]
+        },
+    ]
+})

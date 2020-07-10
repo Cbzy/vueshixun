@@ -11,10 +11,10 @@
           </div>
           <ul class="head_nav">
             <li class="head_nav_index">
-              <router-link to="/" class="head-nav-active">首页</router-link>
+              <router-link to="/" >首页</router-link>
             </li>
             <li class="head_nav_place">
-              <router-link to="/Destination" >目的地</router-link>
+              <router-link to="/Destination">目的地</router-link>
             </li>
             <li class="head_nav_gonglve">
               <router-link to="/Strategy">旅游攻略</router-link>
@@ -133,7 +133,7 @@
           </div>
         </div>
       </div>
-      <div class="main" >
+      <div class="main">
         <router-view />
       </div>
       <div class="mfw-container clearfix">
@@ -311,11 +311,33 @@
         </div>
       </div>
     </div>
+    <div class="mfw-toolbar">
+      <div class="toolbar-item-top">
+        <el-backtop style="right: 0;bottom: 0;">
+          <i class="icon_top"></i>
+          <em>返回顶部</em>
+        </el-backtop>
+      </div>
+      <div class="toolbar-item-feedack">
+        <a href="#" class="btn">
+          <i class="icon_feedback"></i>
+          <em>意见反馈</em>
+        </a>
+      </div>
+      <div class="toolbar-item-code">
+          <a href="#" class="btn">
+            <i class="icon_code"></i>
+          </a>
+          <a href="#" class="mfw-code">
+            <img src="https://p1-q.mafengwo.net/s1/M00/6C/51/wKgIC1t_6TuASybrAADGUPUHjr021.jpeg?imageMogr2%2Fthumbnail%2F%21450x192r%2Fgravity%2FCenter%2Fcrop%2F%21450x192%2Fquality%2F90" alt="" width="450" height="192">
+          </a>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 import Login from "@/components/Login/Login";
-
+import backtop from "@/components/backtop";
 export default {
   name: "App",
   data() {
@@ -351,7 +373,8 @@ export default {
     }
   },
   components: {
-    Login
+    Login,
+    backtop
   }
 };
 </script>

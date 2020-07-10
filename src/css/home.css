@@ -125,17 +125,17 @@ img{
     line-height: 200px;
     overflow: hidden;
 }
-
 .search-container{
     position: absolute;
-    bottom: 45px;
+    bottom: 54px;
     left: 50%;
-    margin-left: 320px;
-    width: 632px;
+    margin-left: -269px;
+    width: 538px;
     z-index: 5;
+   
 }
 .search-group{
-    padding: 15px;
+    padding: 10px;
     background-color: #000;
     background-color: rgba(0, 0, 0, .6);
     border-radius: 4px;
@@ -152,8 +152,26 @@ img{
     display: inline;
     cursor: pointer;
 }
+.tab-selected i{
+    background-position: -60px -140px!important;
+}
+.searchtab i{
+    float: left;
+    margin: 5px 5px 0 0;
+    width: 16px;
+    height: 16px;
+    background-image:url(../img/home/header-sprites13.png) ;
+    background-position: -60px -110px!important;
+}
+.searchtab a{
+    color: #fff;
+}
 .show-nav .active{
     border: 2px solid #ff9d00;
+}
+.searchbar{
+    height: 36px;
+    overflow: hidden;
 }
 /* .show-slider .show-image li:before {
     width: 88px;

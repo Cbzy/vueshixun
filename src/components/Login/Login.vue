@@ -155,7 +155,7 @@ export default {
 				let sql_name = localStorage.getItem('1'+this.phone);
 				let sql_pwd = localStorage.getItem('0'+this.phone);
 				if(this.username != sql_name){
-          this.loginErr2 = true;
+          			this.loginErr2 = true;
 					this.Err2Text = "请先注册";
 					this.rlShow = false;
 				}else{
@@ -164,8 +164,8 @@ export default {
 						localStorage.setItem('login',this.name);
 					}else{
 						this.username = '';
-            this.pwd = '';
-            this.loginErr = true;
+						this.pwd = '';
+						this.loginErr = true;
 						this.ErrText = '账号密码错误，请重试或找回密码';
 					}
 				}
@@ -215,13 +215,13 @@ export default {
 		  					this.Err2Text = '短信验证码错误';
 		  				}else{
 		  					const sql_name = localStorage.getItem('1'+this.phone);
-                localStorage.setItem('1'+this.phone,this.phone);
-                localStorage.setItem('0'+this.phone,this.pwd);
-                this.loginErr = true;
-                this.ErrText = '注册成功，请登录';
-                this.loginErr2 = false;
-                this.windowShow = true;
-                this.rlShow = true;
+							localStorage.setItem('1'+this.phone,this.phone);
+							localStorage.setItem('0'+this.phone,this.regPwd);
+							this.loginErr = true;
+							this.ErrText = '注册成功，请登录';
+							this.loginErr2 = false;
+							this.windowShow = true;
+							this.rlShow = true;
 		  				}
 		  			}
 		  		}

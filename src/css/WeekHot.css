@@ -73,10 +73,11 @@
     position: relative;
     z-index: 2;
     top:0px;
+    transition: all .5s;
 }
 .fu2{
     width:246px;
-    height: 40px;
+    height: 44px;
     z-index: 3;
     top: -49px;
     position: relative;
@@ -87,7 +88,7 @@
 }
 
 .main2:hover{
-    transition: all .5s;
+
     top: -42px;
 
 }

@@ -10,7 +10,9 @@
             </ul>
             <ul>
                 <li v-for="(item3,index3) in City" :key="index3" >
-            <div class="change-bar" v-show="index3===num" > </div>
+            <div class="change-bar" :class=" item3.style"  v-show="index3===num" >
+              
+            </div>
                     </li>
             </ul>
 
@@ -100,7 +102,29 @@ export default {
 
         overflow: hidden;
         z-index:0;
-    }   
+    }
+    .change-bar-bg1{
+        background: url(../../assets/travel/1.jpg) no-repeat;
+    }
+    .change-bar-bg2{
+        background: url(../../assets/travel/2.jpg) no-repeat;
+    }
+        .change-bar-bg3{
+        background: url(../../assets/travel/3.jpg) no-repeat;
+    }
+        .change-bar-bg4{
+        background: url(../../assets/travel/4.jpg) no-repeat;
+    }
+        .change-bar-bg5{
+        background: url(../../assets/travel/5.jpg) no-repeat;
+    }
+        .change-bar-bg6{
+        background: url(../../assets/travel/6.jpg) no-repeat;
+    }
+        .change-bar-bg7{
+        background: url(../../assets/travel/7.jpg) no-repeat;
+    }
+
     .change-title a{
         margin-right: 6px;
         color: #666;

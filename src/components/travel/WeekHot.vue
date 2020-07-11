@@ -397,11 +397,12 @@ export default {
         padding-top:7px ;
         
          margin-top:140px ;  */
+                 transition: all .5s;
     }
     .caption:hover{
         top:102px;
         height: 80px;
-        transition: all .5s;
+
     }
 
     .cards{

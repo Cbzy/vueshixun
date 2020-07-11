@@ -145,7 +145,7 @@
 						<i class="icon-caret-down"></i>
 					</a>
 				</div>
-				<div class="head-msg-hidd">
+				<div class="head-msg-hidd" v-show="loginInfoShow2|loginInfoShow3">
 					<ul @mouseenter="loginInfoShow2=true" @mouseleave="loginInfoShow2=false" class="head-news" v-show="loginInfoShow2">
 						<li v-for="(item,index) in newsList" :key="index"><a href="#">{{item}}</a></li>
 					</ul>
@@ -382,7 +382,7 @@ export default {
 	  loginInfoShow2: false,
 	  loginInfoShow3: false,
 	  dakaString:'打卡',
-	  
+
 	  newsList:[
 		  '私信','小组消息','系统通知','问答消息','回复消息','喜欢与收藏','好友动态',
 	  ],

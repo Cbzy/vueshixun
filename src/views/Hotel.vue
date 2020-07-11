@@ -52,20 +52,107 @@
     <div class="h-theme" id="_j_features">
             <div class="h-title" style="margin-top: 50px;">主题住宿</div>
             <div class="tab-theme">
-                <div class="themeList clearfix _j_tab_trigger" v-for="(item,Id) in stayList" :key="Id">
-                  <!-- <a href="" :class="{on:Id==hotMouseOn}" v-on:mouseenter="stayChangActive(Id)">{{item.title}}</a> -->
-                    <a href="" :class="{on :isOn}" @click="on">{{item.title}}</a>
-                    <a href=""  :class="{on :!isOn}" @click="on">童话小镇</a>
-                    <a href="" :class="{on :!isOn}" @click="on">吃货根据地</a>
-                    <a href=""  :class="{on :!isOn}" @click="on">目的地特色</a>
-                    <a href=""  :class="{on :!isOn}" @click="on">潜水圣地</a>
-                    <a href=""  :class="{on :!isOn}" @click="on">周末好去处</a>
+                <div class="themeList clearfix _j_tab_trigger" >
+
+                    <a  href="javascript:void(0);" :class="{'on' :currentSort==Id}" @click="getItem(Id)" v-for="(item,Id) in stayList" :key="Id">{{item.title}}</a>
+
                 </div>
-                <div class="_j_tab_content">
-                    <ul class="clearfix" style="display: block;" v-for="item in stayList" :key="item.Id">
+                <!-- 浪漫花海 -->
+                <div class="_j_tab_content"  >
+                    <ul class="clearfix"  v-for="item in stayList" v-if="item.Id == 0"  :key="item.Id" v-show="currentSort==0">
                       <li v-for="img in item.image" :key="img.id">
                         <div class="fc-item">
-                          <a href="/hotel/10747/" target="_blank" data-type="mdd" data-name="富士山">
+                          <a href="/hotel/10747/" target="_blank"  >
+                            <div class="pic">
+                              <img width="318" height="240" style="width:318px;height:240px;" :src=img.img class="img-show">
+                            </div>
+                            <div class="bag-opa"></div>
+                            <span class="shadow"></span>
+                            <div class="info">
+                              <h2>{{img.name}}</h2>
+                              <p class="caption">{{img.state}}</p>
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <ul class="clearfix"  v-for="item in stayList" v-if="item.Id == 1"  :key="item.Id" v-show="currentSort==1">
+                      <li v-for="img in item.image" :key="img.id">
+                        <div class="fc-item">
+                          <a href="/hotel/10747/" target="_blank"  >
+                            <div class="pic">
+                              <img width="318" height="240" style="width:318px;height:240px;" :src=img.img class="img-show">
+                            </div>
+                            <div class="bag-opa"></div>
+                            <span class="shadow"></span>
+                            <div class="info">
+                              <h2>{{img.name}}</h2>
+                              <p class="caption">{{img.state}}</p>
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <ul class="clearfix"  v-for="item in stayList" v-if="item.Id == 2"  :key="item.Id" v-show="currentSort==2">
+                      <li v-for="img in item.image" :key="img.id">
+                        <div class="fc-item">
+                          <a href="/hotel/10747/" target="_blank"  >
+                            <div class="pic">
+                              <img width="318" height="240" style="width:318px;height:240px;" :src=img.img class="img-show">
+                            </div>
+                            <div class="bag-opa"></div>
+                            <span class="shadow"></span>
+                            <div class="info">
+                              <h2>{{img.name}}</h2>
+                              <p class="caption">{{img.state}}</p>
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <ul class="clearfix"  v-for="item in stayList" v-if="item.Id == 3"  :key="item.Id" v-show="currentSort==3">
+                      <li v-for="img in item.image" :key="img.id">
+                        <div class="fc-item">
+                          <a href="/hotel/10747/" target="_blank"  >
+                            <div class="pic">
+                              <img width="318" height="240" style="width:318px;height:240px;" :src=img.img class="img-show">
+                            </div>
+                            <div class="bag-opa"></div>
+                            <span class="shadow"></span>
+                            <div class="info">
+                              <h2>{{img.name}}</h2>
+                              <p class="caption">{{img.state}}</p>
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <ul class="clearfix"  v-for="item in stayList" v-if="item.Id == 4"  :key="item.Id" v-show="currentSort==4">
+                      <li v-for="img in item.image" :key="img.id">
+                        <div class="fc-item">
+                          <a href="/hotel/10747/" target="_blank"  >
+                            <div class="pic">
+                              <img width="318" height="240" style="width:318px;height:240px;" :src=img.img class="img-show">
+                            </div>
+                            <div class="bag-opa"></div>
+                            <span class="shadow"></span>
+                            <div class="info">
+                              <h2>{{img.name}}</h2>
+                              <p class="caption">{{img.state}}</p>
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <ul class="clearfix"  v-for="item in stayList" v-if="item.Id == 5"  :key="item.Id" v-show="currentSort==5">
+                      <li v-for="img in item.image" :key="img.id">
+                        <div class="fc-item">
+                          <a href="/hotel/10747/" target="_blank"  >
                             <div class="pic">
                               <img width="318" height="240" style="width:318px;height:240px;" :src=img.img class="img-show">
                             </div>
@@ -82,6 +169,8 @@
                 </div>
 
 
+
+
               </div>
       </div>
 
@@ -89,12 +178,12 @@
             <div class="h-title">特价酒店</div>
             <div class="tab-fav">
               <div class="favList clearfix _j_tab_trigger">
-                <a href=""  class="on">曼谷</a>
-                <a href="" class="">台北</a>
-                <a href=""  class="">东京</a>
-                <a href=""  class="">香港</a>
-                <a href=""  class="">首尔</a>
-                <a href=""  class="">新加坡</a>
+                <a href="javascript:void(0);"  class="on">曼谷</a>
+                <a href="javascript:void(0);" class="">台北</a>
+                <a href="javascript:void(0);"  class="">东京</a>
+                <a href="javascript:void(0);"  class="">香港</a>
+                <a href="javascript:void(0);"  class="">首尔</a>
+                <a href="javascript:void(0);"  class="">新加坡</a>
               </div>
               <div class="tab-con _j_tab_content">
                 <ul class="clearfix" style="display: block;" v-for="item in specList" :key="item.Id" >
@@ -137,7 +226,9 @@ export default {
     return {
       isOn:true,
       stayList:[],
-      specList:[]
+      specList:[],
+      currentSort:0,
+      Id:0
 
     }
 },
@@ -145,8 +236,8 @@ export default {
     this.getData();
   },
   methods:{
-    on:function(){
-
+    getItem(Id){
+      this.currentSort = Id;
     },
     getData() {
       axios.get('../../static/Stay.json').then(response => {

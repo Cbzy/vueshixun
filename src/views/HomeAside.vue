@@ -25,7 +25,7 @@
               <p>{{item.content}}</p>
             </h3>
           </li>
-         
+
         </ul>
         <div class="page" v-if="this.AsideList.length > 1">
           <ol class="slide-ol">
@@ -169,7 +169,7 @@ export default {
     this.gotoPage(this.nextIndex);
     }, 3500)
   },
-   
+
   beforeDestroy() {
     clearInterval(this.timer);
   },

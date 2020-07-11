@@ -52,27 +52,28 @@
     <div class="h-theme" id="_j_features">
             <div class="h-title" style="margin-top: 50px;">主题住宿</div>
             <div class="tab-theme">
-                <div class="themeList clearfix _j_tab_trigger">
-                    <a href="javascript:;" data-id="0" class="on">浪漫花海</a>
-                    <a href="javascript:;" data-id="1" class="">童话小镇</a>
-                    <a href="javascript:;" data-id="2" class="">吃货根据地</a>
-                    <a href="javascript:;" data-id="3" class="">目的地特色</a>
-                    <a href="javascript:;" data-id="4" class="">潜水胜地</a>
-                    <a href="javascript:;" data-id="5" class="">周末好去处</a>
+                <div class="themeList clearfix _j_tab_trigger" v-for="(item,Id) in stayList" :key="Id">
+                  <!-- <a href="" :class="{on:Id==hotMouseOn}" v-on:mouseenter="stayChangActive(Id)">{{item.title}}</a> -->
+                    <a href="" :class="{on :isOn}" @click.native="on">{{item.title}}</a>
+                    <a href=""  :class="{on :!isOn}" @click.native="on">童话小镇</a>
+                    <a href="" :class="{on :!isOn}" @click.native="on">吃货根据地</a>
+                    <a href=""  :class="{on :!isOn}" @click.native="on">目的地特色</a>
+                    <a href=""  :class="{on :!isOn}" @click.native="on">潜水圣地</a>
+                    <a href=""  :class="{on :!isOn}" @click.native="on">周末好去处</a>
                 </div>
                 <div class="_j_tab_content">
-                    <ul class="clearfix" style="display: block;" data-id="0">
-                      <li>
+                    <ul class="clearfix" style="display: block;" v-for="item in stayList" :key="item.Id">
+                      <li v-for="img in item.image" :key="img.id">
                         <div class="fc-item">
                           <a href="/hotel/10747/" target="_blank" data-type="mdd" data-name="富士山">
                             <div class="pic">
-                              <img width="318" height="240" style="width:318px;height:240px;" src="http://p1-q.mafengwo.net/s10/M00/51/B4/wKgBZ1jLu5WAR-ezABxIarXxVhg42.jpeg?imageMogr2%2Fthumbnail%2F%21636x480r%2Fgravity%2FCenter%2Fcrop%2F%21636x480%2Fquality%2F90" class="img-show">
+                              <img width="318" height="240" style="width:318px;height:240px;" :src=img.img class="img-show">
                             </div>
                             <div class="bag-opa"></div>
                             <span class="shadow"></span>
                             <div class="info">
-                              <h2>富士山</h2>
-                              <p class="caption">日本</p>
+                              <h2>{{img.name}}</h2>
+                              <p class="caption">{{img.state}}</p>
                             </div>
                           </a>
                         </div>
@@ -83,14 +84,90 @@
 
               </div>
       </div>
+
+      <div class="h-favorablle" id="_j_sales">
+            <div class="h-title">特价酒店</div>
+            <div class="tab-fav">
+              <div class="favList clearfix _j_tab_trigger">
+                <a href=""  class="on">曼谷</a>
+                <a href="" class="">台北</a>
+                <a href=""  class="">东京</a>
+                <a href=""  class="">香港</a>
+                <a href=""  class="">首尔</a>
+                <a href=""  class="">新加坡</a>
+              </div>
+              <div class="tab-con _j_tab_content">
+                <ul class="clearfix" style="display: block;" v-for="item in specList" :key="item.Id" >
+                  <li v-for="img in item.img" :key="img.id">
+                    <a href="" target="_blank" data-type="hotel" >
+                      <div class="pic">
+                        <img :src=img.img class="img-show">
+                      </div>
+                      <div class="bag-opa"></div>
+                      <div class="fraction">{{img.score}}</div>
+                      <div class="info">
+                        <div class="prize"></div>
+                        <p>{{img.title}}</p>
+                        <p class="eng">{{img.Eng}}</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name:'Hotel',
+  data() {
+    return {
+      isOn:true,
+      stayList:[],
+      specList:[]
+
+    }
+},
+  mounted() {
+    this.getData();
+  },
+  methods:{
+    getData() {
+      axios.get('../../static/Stay.json').then(response => {
+        this.stayList = response.data;
+      }, response => {
+        console.log("get stayList is error");
+      });
+      axios.get('../../static/Special.json').then(response => {
+        this.specList = response.data;
+      }, response => {
+        console.log("get specList is error");
+      });
+  },
+  stayChangActive(Id){
+    this.stayMouseOn = index;
+  }
+  }
 }
 </script>
+
+
+
+
+
 
 <style>
 body, p, div {
@@ -406,5 +483,106 @@ ul, li, ol {
     width: 100%;
     background: url(~@/assets/Hotel/floating-card-shadow.png?a=1) no-repeat;
     background-size: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.h-favorablle {
+    padding-bottom: 100px;
+}
+.h-favorablle .h-title {
+    text-align: center;
+    margin: 20px 0 25px 0;
+}
+.favList {
+    border-bottom: 1px solid #e4e4e4;
+    width: 1000px;
+    margin: 0 auto;
+}
+.favList a.on {
+    color: #ff8a00;
+    border-bottom: 3px solid #ff8a00;
+    margin-bottom: -2px;
+}
+.favList a {
+    display: block;
+    text-decoration: none;
+    float: left;
+    width: 166px;
+    width: 16.66%;
+    color: #666;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+}
+.tab-fav ul {
+    width: 1012px;
+    padding-top: 20px;
+}
+.tab-fav ul li {
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+    float: left;
+    margin: 0 13px 13px 0;
+    position: relative;
+}
+._j_tab_content .img-show {
+    opacity: 1;
+}
+.tab-fav ul li img {
+    width: 240px;
+    height: 240px;
+}
+.tab-fav ul li .bag-opa {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: .2;
+    z-index: 2;
+}
+.tab-fav ul li .fraction {
+    width: 55px;
+    height: 25px;
+    font-size: 18px;
+    color: #FFF;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 13px;
+    top: 13px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 4px;
+    z-index: 5;
+}
+.tab-fav ul li .info {
+    position: absolute;
+    z-index: 3;
+    left: 13px;
+    bottom: 13px;
+    width: 220px;
+    margin-top: -30px;
+    color: #FFF;
+}
+.tab-fav .info .prize, .tab-fav .info p {
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+}
+.tab-fav ul li .info p {
+    font-size: 14px;
+}
+.tab-fav ul li .info p.eng {
+    font-size: 12px;
 }
 </style>

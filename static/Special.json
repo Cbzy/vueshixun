@@ -1,0 +1,61 @@
+ [{
+     "Id": "1",
+     "city": "曼谷",
+     "img": [{
+             "id": 1,
+             "score": "8.4分",
+             "title": "曼谷威客3号酒店（原曼谷胜利纪念碑全季酒店）",
+             "img": "http://n1-q.mafengwo.net/s11/M00/97/56/wKgBEFsjNU6ADk6NAAIXJnPqJIM73.jpeg?imageMogr2%2Fthumbnail%2F%21480x480r%2Fgravity%2FCenter%2Fcrop%2F%21480x480%2Fquality%2F90",
+             "Eng": "Vic3 Bangkok"
+         },
+         {
+             "id": 2,
+             "score": "8.8分",
+             "title": "穰南帝景酒店",
+             "img": "http://b1-q.mafengwo.net/s11/M00/7D/D8/wKgBEFsY872AdeVPAAIR_MMohbg08.jpeg?imageMogr2%2Fthumbnail%2F%21480x480r%2Fgravity%2FCenter%2Fcrop%2F%21480x480%2Fquality%2F90",
+             "Eng": "Royal View Resort - Rang Nam"
+         },
+         {
+             "id": 3,
+             "score": "8.4分",
+             "title": "璀璨专享服务公寓",
+             "img": "http://p1-q.mafengwo.net/s7/M00/3F/78/wKgB6lR0t0iAfpAdAANZ56tPKao53.jpeg?imageMogr2%2Fthumbnail%2F%21480x480r%2Fgravity%2FCenter%2Fcrop%2F%21480x480%2Fquality%2F90",
+             "Eng": "Abloom Exclusive Serviced Apartments"
+         },
+         {
+             "id": 4,
+             "score": "8.7分",
+             "title": "曼谷暹罗安纳塔拉酒店",
+             "img": "http://n1-q.mafengwo.net/s10/M00/DE/AC/wKgBZ1mINF6ADiZKAAMQRMi1Wy411.jpeg?imageMogr2%2Fthumbnail%2F%21480x480r%2Fgravity%2FCenter%2Fcrop%2F%21480x480%2Fquality%2F90",
+             "Eng": "Anantara Siam Bangkok Hotel"
+         },
+         {
+             "id": 5,
+             "score": "8.4分",
+             "title": "彩虹云霄酒店",
+             "img": "http://b1-q.mafengwo.net/s9/M00/1E/47/wKgBs1hJJ1OANkS8AAevVMGRJoE36.jpeg?imageMogr2%2Fthumbnail%2F%21480x480r%2Fgravity%2FCenter%2Fcrop%2F%21480x480%2Fquality%2F90",
+             "Eng": "Vic3 Bangkok"
+         },
+         {
+             "id": 6,
+             "score": "7.7分",
+             "title": "曼谷廊曼机场阿玛瑞酒店",
+             "img": "http://n1-q.mafengwo.net/s6/M00/93/D3/wKgB4lMDU3iAMLEGAAJejjVcGGU69.jpeg?imageMogr2%2Fthumbnail%2F%21480x480r%2Fgravity%2FCenter%2Fcrop%2F%21480x480%2Fquality%2F90",
+             "Eng": "Amari Don Muang Airport Bangkok"
+         },
+         {
+             "id": 7,
+             "score": "8.7分",
+             "title": "曼谷利特酒店",
+             "img": "http://n1-q.mafengwo.net/s10/M00/B2/49/wKgBZ1nvaZGAR7RKAAKXZ1MPtvU52.jpeg?imageMogr2%2Fthumbnail%2F%21480x480r%2Fgravity%2FCenter%2Fcrop%2F%21480x480%2Fquality%2F90",
+             "Eng": "LiT BANGKOK Hotel"
+         },
+         {
+             "id": 8,
+             "score": "8.0分",
+             "title": "暹罗四季酒店",
+             "img": "http://n1-q.mafengwo.net/s11/M00/97/56/wKgBEFsjNU6ADk6NAAIXJnPqJIM73.jpeg?imageMogr2%2Fthumbnail%2F%21480x480r%2Fgravity%2FCenter%2Fcrop%2F%21480x480%2Fquality%2F90",
+             "Eng": "Seasons Siam Hotel"
+         }
+     ]
+ }]

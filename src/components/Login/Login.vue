@@ -162,6 +162,7 @@ export default {
 					if(this.username == sql_name && this.pwd == sql_pwd){
 						this.$emit("getData", false);
 						localStorage.setItem('isLogin',localStorage.getItem('name-'+this.username));
+						this.$forceUpdate();
 					}else{
 						this.username = '';
 						this.pwd = '';

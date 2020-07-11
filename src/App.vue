@@ -118,7 +118,7 @@
           </ul>
           <div></div>
           <div>
-            <div class="login_out">
+            <div class="login_out" v-if="username==null|username==''">
               <router-link to class="weibo_login"></router-link>
               <router-link to class="qq_login"></router-link>
               <router-link to class="weixin_login"></router-link>
@@ -130,6 +130,35 @@
 		          <a href="#" class="weixin_login"></a>
               <a href="#" id="_jshow"></a>-->
             </div>
+			<div class="login-info" v-else>
+				<button class="head-card" :style="loginOn1" @click="daka">{{dakaString}}</button>
+				<div :class="{loginOn2:loginInfoShow2}" class="head-msg" @mouseenter="loginInfoShow2=true" @mouseleave="loginInfoShow2=false">
+					<a class="drop-trigger" href="javascript:;">
+						<i class="icon-msg"></i>
+						消息
+						<i class="icon-caret-down"></i>
+					</a>
+				</div>
+				<div :class="{loginOn3:loginInfoShow3}" class="head-user" @mouseenter="loginInfoShow3=true" @mouseleave="loginInfoShow3=false">
+					<a class="drop-trigger" href="javascript:;">
+						<i class="user-portrait">{{headPortrait}}</i>
+						<i class="icon-caret-down"></i>
+					</a>
+				</div>
+				<div class="head-msg-hidd" v-show="loginInfoShow2|loginInfoShow3">
+					<ul @mouseenter="loginInfoShow2=true" @mouseleave="loginInfoShow2=false" class="head-news" v-show="loginInfoShow2">
+						<li v-for="(item,index) in newsList" :key="index"><a href="#">{{item}}</a></li>
+					</ul>
+					<ul @mouseenter="loginInfoShow3=true" @mouseleave="loginInfoShow3=false" class="head-information" v-show="loginInfoShow3">
+						<li class="user-info"><a href="#">蜂蜜 1</a> / <a href="#">金币 1002</a></li>
+						<li v-for="(item,index) in informationList" :key="index">
+							<a href="#" v-if="item=='我的马蜂窝'"><i></i>{{item}}<span>LV.2</span></a>
+							<a href="javascript:;" @click="logoutHandle" v-else-if="item=='退出'"><i></i>{{item}}</a>
+							<a href="#" v-else><i></i>{{item}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
           </div>
         </div>
       </div>
@@ -345,8 +374,21 @@ export default {
       Height: 0,
       loginShow: false,
       rShow: true,
+	  informationShow: false,
 
-      username: localStorage.getItem("isLogin")
+      username: localStorage.getItem("isLogin"),
+	  headPortrait: '',
+	  loginOn1: false,
+	  loginInfoShow2: false,
+	  loginInfoShow3: false,
+	  dakaString:'打卡',
+
+	  newsList:[
+		  '私信','小组消息','系统通知','问答消息','回复消息','喜欢与收藏','好友动态',
+	  ],
+	  informationList:[
+		   '我的马蜂窝','写游记','预约游记','我的足迹','我的问答','我的好友','我的收藏','我的路线','我的订单','我的优惠券','创作者开放平台','设置','退出',
+	  ],
     };
   },
   mounted() {
@@ -354,6 +396,9 @@ export default {
     window.onresize = () => {
       this.Height = document.documentElement.clientHeight - 100;
     };
+	if(this.username!=null){
+		this.headPortrait = this.username.slice(0,1);
+	}
   },
   methods: {
     lShowChange() {
@@ -369,16 +414,28 @@ export default {
       this.loginShow = data;
     },
     logoutHandle() {
-      localStorage.removeItem("login");
-    }
+      localStorage.removeItem('isLogin');
+	  this.lShowChange();
+	  this.msg = this.rlShow;
+    },
+	daka(){
+		this.dakaString = '已打卡';
+		this.loginOn1 = {background: '#ff9d00'};
+	},
   },
   components: {
     Login,
     backtop
+  },
+  updated() {
+  	if(localStorage.getItem("isLogin")!=null){
+  		this.username= localStorage.getItem("isLogin");
+  	}
   }
 };
 </script>
 <style >
 @import url("./css/app.css");
 @import url("./css/home.css");
+@import url("./css/LoginChange.css");
 </style>

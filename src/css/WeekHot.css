@@ -31,7 +31,15 @@
 }
  .active{
     color: #fff;
+    background-color:#786ee6;
+}
+.active1{
+    color: #fff;
     background-color:#45bd9e;
+}
+.active2{
+    color: #fff;
+    background-color:#ffb80e;
 }
 
 .bn-side{

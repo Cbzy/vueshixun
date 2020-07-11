@@ -183,19 +183,19 @@
          
 
          <!-- 第二种列表 -->
-        <!-- <div class="row">
+        <div class="row">
             <div class="row-title">
                 <h2 style="color:#45bd9e;font-weight: normal;font-size:24px;line-height:41px;width:170px">
                     主题推荐
                 </h2>
                 <ul class="bar">
-                    <li @mouseenter="enter(index1)" v-for="(item1,index1) in theme" :key="index1" >{{item1.name}}</li>
+                    <li @mouseenter="enter(index1)" v-for="(item1,index1) in theme.slice(start,end)" :key="index1"  :class="{active1:index1==res}">{{item1.name}}</li>
                 </ul>
             </div>  
             <div class="bn-side">
                 <img src="https://b1-q.mafengwo.net/s9/M00/6B/86/wKgBs1byYsOAREbHAAJa5lj0Ouk15.jpeg?imageMogr2%2Fthumbnail%2F%21308x482r%2Fgravity%2FCenter%2Fcrop%2F%21308x482%2Fquality%2F100" width="154px" height="241px">
             </div>
-            <ul class="item" v-for="(item1,index3) in theme" :key="index3" v-show="res === index3">
+            <ul class="item" v-for="(item1,index3) in theme.slice(start,end)" :key="index3" v-show="res === index3">
                <li class="w2" v-for="(item2,index2) in item1.main" :key="index2">
                     <div><img :src="item2.img" alt="" width="266px" height="151px"></div>
                     <div class="main2">{{item2.main}}</div>
@@ -203,49 +203,49 @@
                         <div class="fu2">￥{{item2.money}}<i style="font-size:14px;font-style:normal">起</i><i style="padding-left:58px;float: right;padding-top: 8px;font-size: 12px;color: #666;font-style:normal;line-height:34px">店铺:{{item2.shop}}</i></div>
                     </li> 
             </ul>
-        </div> -->
-         <!-- <div class="row">
+        </div> 
+         <div class="row">
             <div class="row-title">
                 <h2 style="color:#ffb80e;font-weight: normal;font-size:24px;line-height:41px;width:170px">
                     机酒自由行
                 </h2>
                 <ul class="bar">
-                    <li v-for="(item1,index1) in theme" :key="index1"   @mouseenter="enter(index1)">{{item1.name}}</li>
+                    <li v-for="(free,free1) in theme.slice(start1,end1)" :key="free1"   @mouseenter="enter2(free1)" :class="{active2:free1==res2}" >{{free.name}}</li>
                 </ul>
             </div>  
             <div class="bn-side">
                 <img src="https://n1-q.mafengwo.net/s9/M00/6D/E5/wKgBs1byZ6CAZWQzAAM1AisO_po37.jpeg?imageMogr2%2Fthumbnail%2F%21308x482r%2Fgravity%2FCenter%2Fcrop%2F%21308x482%2Fquality%2F100" width="154px" height="241px">
             </div>
-            <ul class="item" v-for="(item1,index3) in theme" :key="index3" v-show="res === index3">
-               <li class="w2" v-for="(item2,index2) in item1.main" :key="index2">
-                    <div><img :src="item2.img" alt="" width="266px" height="151px"></div>
-                    <div class="main2">{{item2.main}}</div>
+            <ul class="item" v-for="(free,free2) in theme.slice(start1,end1)" :key="free2" v-show="res2 === free2">
+               <li class="w2" v-for="(free1,free3) in free.main" :key="free3">
+                    <div><img :src="free1.img" alt="" width="266px" height="151px"></div>
+                    <div class="main2">{{free1.main}}</div>
 
-                        <div class="fu2">￥{{item2.money}}<i style="font-size:14px;font-style:normal">起</i><i style="padding-left:58px;float: right;padding-top: 8px;font-size: 12px;color: #666;font-style:normal;line-height:34px">店铺:{{item2.shop}}</i></div>
+                        <div class="fu2">￥{{free1.money}}<i style="font-size:14px;font-style:normal">起</i><i style="padding-left:58px;float: right;padding-top: 8px;font-size: 12px;color: #666;font-style:normal;line-height:34px">店铺:{{free1.shop}}</i></div>
                     </li> 
             </ul>
-        </div> -->
-                <div class="row">
-            <div class="row-title">
+        </div> 
+            <div class="row">
+                <div class="row-title">
                 <h2 style="color:#786ee6;font-weight: normal;font-size:24px;line-height:41px;width:170px">
                     出行必备
                 </h2>
                 <ul class="bar">
-                    <li  v-for="(item1,index1) in theme" :key="index1" :class="{active:index1==res}"  @mouseenter="enter(index1)">{{item1.name}}</li>
+                    <li  v-for="(item1,index1) in theme.slice(start2,end2)" :key="index1" :class="{active:index1==res1}"  @mouseenter="enter1(index1)">{{item1.name}}</li>
                 </ul>
-            </div>  
-            <div class="bn-side">
+                </div>  
+                <div class="bn-side">
                 <img src="https://b1-q.mafengwo.net/s9/M00/5B/47/wKgBs1b0rY-AVAXlAAJIPzQw_oE31.jpeg?imageMogr2%2Fthumbnail%2F%21308x482r%2Fgravity%2FCenter%2Fcrop%2F%21308x482%2Fquality%2F100" width="154px" height="241px">
-            </div>
-            <ul class="item" v-for="(item1,index3) in theme" :key="index3" v-show="res === index3">
+                </div>
+                <ul class="item" v-for="(item1,index3) in theme.slice(start2,end2)" :key="index3" v-show="res1 === index3">
                <li class="w2" v-for="(item2,index2) in item1.main" :key="index2">
                     <div><img :src="item2.img" alt="" width="266px" height="151px"></div>
                     <div class="main2">{{item2.main}}</div>
 
                         <div class="fu2">￥{{item2.money}}<i style="font-size:14px;font-style:normal">起</i><i style="padding-left:58px;float: right;padding-top: 8px;font-size: 12px;color: #666;font-style:normal;line-height:34px">店铺:{{item2.shop}}</i></div>
                     </li> 
-            </ul>
-        </div>
+                </ul>
+             </div> 
     </div>
 </template>
 <script>
@@ -261,7 +261,15 @@ export default {
         Shop:[],
         theme:[],
         item3:[],
-        res:'0'
+        res:'0',
+        res1:'0',
+        res2:'0',
+        start:0,
+        end:3,
+        start1:3,
+        end1:6,
+        start2:6,
+        end2:9,
       }
     },
     mounted() {
@@ -272,10 +280,18 @@ export default {
     this.getData5();
     this.getData6();
     this.enter(0);
+    this.enter1(0);
+    this.enter2(0);
   },
   methods: {
           enter(index1){
-        this.res = index1;
+        this.res = index1;  
+        },
+        enter1(index1){
+        this.res1 = index1;  
+        },
+        enter2(free1){
+        this.res2 = free1;  
         },
     getData() {
       axios.get('../../../static/WeekHot.json').then(response => {

@@ -3,10 +3,22 @@
                 "name": "海岛特惠",
                 "main":[
                     {
-                        "mian":"武汉",
-                        "money":1080,
-                        "shop":"国旅全球游",
-                        "img":"s"
+                        "main":"成都直飞泰国甲米5-7天往返机票（春秋航空/四川航空+可选专车接机或送机/可选电话卡)",
+                        "money":1740,
+                        "shop":"春秋乐玩假期",
+                        "img":"https://b1-q.mafengwo.net/s12/M00/E2/92/wKgED1wOIKiAFVPvAALxT1-bMZs60.jpeg?imageMogr2%2Fthumbnail%2F%21532x302r%2Fgravity%2FCenter%2Fcrop%2F%21532x302%2Fquality%2F100"
+                    },
+                    {
+                        "main":"优选品质酒店大集合·成都直飞芽庄6天5晚自由行（海量品质酒店任意选择+包机往返直飞+赠送签证办理+赠送当地接送机+赠送旅游意外险）",
+                        "money":2980,
+                        "shop":"全球通国旅",
+                        "img":"https://n1-q.mafengwo.net/s10/M00/B1/2C/wKgBZ1ldrROAPSy0AAQjG-GMNho17.jpeg?imageMogr2%2Fthumbnail%2F%21532x302r%2Fgravity%2FCenter%2Fcrop%2F%21532x302%2Fquality%2F100"
+                    },
+                    {
+                        "main":"西安直飞三亚5天4晚自由行（独享亚特兰蒂斯海景房+无限次畅玩水世界/水族馆+网红亲子/蜜月/家庭酒店任意组合+专车接送机+旅拍）",
+                        "money":1565,
+                        "shop":"江湖人",
+                        "img":"https://n1-q.mafengwo.net/s12/M00/A9/A6/wKgED1urdKeAGax9AAEWQ7Qc--o47.jpeg?imageMogr2%2Fthumbnail%2F%21532x302r%2Fgravity%2FCenter%2Fcrop%2F%21532x302%2Fquality%2F100"
                     }
                 ]
             },
@@ -14,10 +26,22 @@
                 "name": "亲子同行",
                 "main":[
                     {
-                        "mian":"武汉",
-                        "money":1080,
-                        "shop":"国旅全球游",
-                        "img":"s"
+                        "main":"无边泳池海景酒店 武汉直飞普吉6天5晚自由行（芭东海滩+私家沙滩+泰式SPA+VIP专车接送+出境意外险+泰国电话卡+蜜月布置）",
+                        "money":3480,
+                        "shop":"平安假日",
+                        "img":"https://n1-q.mafengwo.net/s11/M00/FE/70/wKgBEFsqL9eAAQrhAASA0yWudsg39.jpeg?imageMogr2%2Fthumbnail%2F%21532x302r%2Fgravity%2FCenter%2Fcrop%2F%21532x302%2Fquality%2F100"
+                    },
+                    {
+                        "main":"亲子度假·成都往返新加坡6天5晚自由行（个签/团签快速出签+赠送接机+金沙酒店+圣淘沙酒店+多套餐搭配+可安排景点玩乐）",
+                        "money":6180,
+                        "shop":"旅行家",
+                        "img":"https://p1-q.mafengwo.net/s12/M00/9A/9D/wKgED1vuhEKAaTbvAA99YDRusho138.gif?imageMogr2%2Fthumbnail%2F%21532x302r%2Fgravity%2FCenter%2Fcrop%2F%21532x302%2Fquality%2F100"
+                    },
+                    {
+                        "main":"趣滑雪·乐温泉～武汉直飞长春/长白山5日自由行（净月潭喜来登/万达假日/酒店门对门直通车+水乐园/雪圈公园+度假助理/每日双早+免费接送机）",
+                        "money":4979,
+                        "shop":"海航国旅",
+                        "img":"https://p1-q.mafengwo.net/s12/M00/63/55/wKgED1v_Vp6AGEH_ABAgLOD2ZWs909.gif?imageMogr2%2Fthumbnail%2F%21532x302r%2Fgravity%2FCenter%2Fcrop%2F%21532x302%2Fquality%2F100"
                     }
                 ]
             },
@@ -25,10 +49,22 @@
                 "name": "吃货聚集地",
                 "main":[
                     {
-                        "mian":"武汉",
+                        "main":"武汉往返恩施4天自由行酒店自选（1人成行天天发/往返动车/高铁/天数任选/多种酒店标准任选/车站酒店往返专车接送/赠送旅游意外保险/可代订1日游）",
                         "money":1080,
                         "shop":"国旅全球游",
-                        "img":"s"
+                        "img":"https://n1-q.mafengwo.net/s11/M00/4D/AA/wKgBEFszrSSAUIFdAAGaiZtOwGE96.jpeg?imageMogr2%2Fthumbnail%2F%21532x302r%2Fgravity%2FCenter%2Fcrop%2F%21532x302%2Fquality%2F100"
+                    },
+                    {
+                        "main":"成都直飞泰国苏梅岛本岛5天4晚自由行（可增定6天5晚+海边/网红/别墅/海景/全岛酒店均可搭配+接送机+意外险）",
+                        "money":4999,
+                        "shop":"春秋乐玩假期",
+                        "img":"https://p1-q.mafengwo.net/s10/M00/5B/7A/wKgBZ1pAk7OAGr-LABNVXyRWz4U611.gif?imageMogr2%2Fthumbnail%2F%21532x302r%2Fgravity%2FCenter%2Fcrop%2F%21532x302%2Fquality%2F100"
+                    },
+                    {
+                        "main":"成都直飞吉隆坡+仙本那7天6晚自由行（可考潜水证+可升级仙本那水屋+含境外接送机+无限流量电话卡和转化插座+旅游意外险+可调整行程天数）",
+                        "money":4280,
+                        "shop":"旅行家",
+                        "img":"https://p1-q.mafengwo.net/s13/M00/77/28/wKgEaVyB0GOAS9cqAARGf6gSmKM26.jpeg?imageMogr2%2Fthumbnail%2F%21532x302r%2Fgravity%2FCenter%2Fcrop%2F%21532x302%2Fquality%2F100"
                     }
                 ]
             }

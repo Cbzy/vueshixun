@@ -25,14 +25,21 @@
     font-size: 16px;
     padding: 0 6px;
     border-radius: 2px;
-    color: #333;
+
     height: 30px;
     line-height: 30px;
 }
-
-.bar li:hover{
+ .active{
+    color: #fff;
+    background-color:#786ee6;
+}
+.active1{
     color: #fff;
     background-color:#45bd9e;
+}
+.active2{
+    color: #fff;
+    background-color:#ffb80e;
 }
 
 .bn-side{
@@ -44,8 +51,43 @@
 .item{
     width: 830px;
     height: 242px;
-    background-color: red;
+    background-color: #fff;
     float: left;
     display: flex;
     margin-left: 16px;
+}
+.w2{
+    width:266px;
+    margin: 0 15px 15px 0;
+
+}
+.main2{
+    height: 80px;
+    background-color:#fff;
+    overflow: hidden;
+    font-weight: normal;
+    color: #000;
+    line-height: 21px;
+    font-size: 14px;
+    padding:5px 10px 10px;
+    position: relative;
+    z-index: 2;
+    top:0px;
+}
+.fu2{
+    width:246px;
+    height: 40px;
+    z-index: 3;
+    top: -49px;
+    position: relative;
+    padding:5px 10px 0px;
+    background-color:#fff;
+    font-size: 22px;
+    color: #ff8a00;
+}
+
+.main2:hover{
+    transition: all .5s;
+    top: -42px;
+
 }

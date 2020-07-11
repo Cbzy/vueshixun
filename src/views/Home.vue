@@ -3,9 +3,14 @@
   <div class="home mfw-focus" style="height:640px">
     <div class="item show-slider" :style="conheight">
       <ul class="show-image">
-        <li class="first" v-for="(item,index) in LbtList" v-show="currentIndex == index" :key="index">
+        <li
+          class="first"
+          v-for="(item,index) in LbtList"
+          v-show="currentIndex == index"
+          :key="index"
+        >
           <a href="#" class="show-pic">
-            <img :src="item.img" alt style="magin-top:-3px;" height="640" width="100%"/>
+            <img :src="item.img" alt style="magin-top:-3px;" height="640" width="100%" />
           </a>
           <a href="#" class="show-title dark">
             <div class="date">
@@ -34,67 +39,143 @@
         </li>
       </ul>
       <div class="page" v-if="this.LbtList.length > 1">
-      <ul class="show-nav">
-        <li class  v-for="(item,index) in LbtList"
-              :key="index"
-              @click="gotoPage(index)"
-              :class="{'active':currentIndex == index}">
-          <a href="#">
-            <img
-              :src="item.img"
-              alt
-              height="62"
-              width="110"
-            />
-            <span></span>
-          </a>
-        </li>
-        
-      </ul>
+        <ul class="show-nav">
+          <li
+            class
+            v-for="(item,index) in LbtList"
+            :key="index"
+            @click="gotoPage(index)"
+            :class="{'active':currentIndex == index}"
+          >
+            <a href="#">
+              <img :src="item.img" alt height="62" width="110" />
+              <span></span>
+            </a>
+          </li>
+        </ul>
       </div>
       <a href="#" class="show-more">历历在目</a>
     </div>
     <div class="search-container">
-        <div class="search-group">
-          <div class="searchtab">
-            <ul class="clearfix">
-              <li class="tab-selected">
-                <router-link to="homeAll">
-                <i></i>
-                全部
-                </router-link>
-              </li>
-              <li class="">
-                <router-link to="">
-                <i></i>
-                酒店
-                </router-link>
-              </li>
-              <li class="">
-                <router-link to="">
-                <i></i>
-                目的地
-                </router-link>
-              </li>
-              <li class="">
-                <router-link to="">
-                <i></i>
-                去旅行
-                </router-link>
-              </li>
-              <li class="">
-                <router-link to="">
-                <i></i>
-                机票
-                </router-link>
-              </li>
-            </ul>
+      <div class="search-group homeSearch">
+        <div class="searchtab">
+          <ul class="clearfix">
+            <li
+              class="tab-selected"
+              v-for="(item,index) in List"
+              :class="{'active':currentSort==index}"
+              @click="getItem(index)"
+              :key="index"
+            >
+              <i></i>
+              {{item}}
+            </li>
+            <!-- <li :class="{'active':currentSort==1}" @click="getItem(index)">
+              <i></i>
+              酒店
+            </li>
+            <li :class="{'active':currentSort==1}" @click="getItem(index)">
+              <i></i>
+              目的地
+            </li>
+            <li :class="{'active':currentSort==1}" @click="getItem(index)">
+              <i></i>
+              去旅行
+            </li>
+            <li :class="{'active':currentSort==1}" @click="getItem(index)">
+              <i></i>
+              机票
+            </li>-->
+          </ul>
+        </div>
+        <div class="searchbar" v-show="currentSort==0">
+          <!-- 全部 -->
+          <div class="search-wrapper">
+            <div class="search-input">
+              <el-input v-model="input" placeholder="搜目的地/攻略/酒店/旅行特价"></el-input>
+            </div>
           </div>
-           <div class="searchbar">
-          <router-view/>
+          <div class="search-button">
+            <a href="#">
+              <i class="icon-search"></i>
+            </a>
+          </div>
         </div>
+        <div class="searchbar searchbar-hotel" v-show="currentSort==1">
+          <!-- 酒店 -->
+          <div class="search-wrapper">
+            <form>
+              <div class="search-input">
+                <el-input v-model="input" placeholder="请输入国家、地区、城市名称" class="city-input"></el-input>
+              </div>
+            </form>
+            <div class="search-date">
+              <el-date-picker
+                v-model="value1"
+                type="daterange"
+                range-separator="至"
+                start-placeholder="开始日期"
+                end-placeholder="结束日期"
+              ></el-date-picker>
+            </div>
+          </div>
+          <div class="search-button">
+            <a href="#">
+              <i class="icon-search"></i>
+            </a>
+          </div>
         </div>
-       
+        <div class="searchbar" v-show="currentSort==2">
+          <!-- 目的地 -->
+          <div class="search-wrapper">
+            <div class="search-input">
+              <el-input v-model="input" placeholder="我要去"></el-input>
+            </div>
+          </div>
+          <div class="search-button">
+            <a href="#">
+              <i class="icon-search"></i>
+            </a>
+          </div>
+        </div>
+        <div class="searchbar" v-show="currentSort==3">
+          <!-- 去旅行 -->
+          <div class="search-wrapper">
+            <div class="search-input">
+              <el-input v-model="input" placeholder="产品名称/目的地/优惠"></el-input>
+            </div>
+          </div>
+          <div class="search-button">
+            <a href="#">
+              <i class="icon-search"></i>
+            </a>
+          </div>
+        </div>
+        <div class="searchbar searchbar-flight" v-show="currentSort==4">
+          <!-- 机票 -->
+          <div class="search-wrapper">
+            <div class="search-input flight-start" style="width:170px">
+              <input type="text" name id placeholder="出发城市" />
+            </div>
+            <div class="search-input flight-end">
+              <input type="text" name id placeholder="到达城市" />
+              <img
+                src="https://b4-q.mafengwo.net/s13/M00/E6/80/wKgEaVy1QDmAJy1YAAAC0ZrtOdM370.png"
+                alt
+                class="search-input-exchange"
+              />
+            </div>
+            <div class="search-input flight-date">
+              <el-date-picker v-model="value1" type="date" placeholder="选择日期"></el-date-picker>
+            </div>
+          </div>
+          <div class="search-button">
+            <a href="#">
+              <i class="icon-search"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -104,6 +185,7 @@ export default {
   name: "Home",
   data() {
     return {
+      List: ["全部", "酒店", "目的地", "去旅行", "机票"],
       LbtList: [
         {
           id: "1",
@@ -168,24 +250,63 @@ export default {
           producer: "啦啦奇闯天涯"
         }
       ],
+      currentSort: 0,
+      index: 0,
       currentIndex: 0,
+      input: "",
       timer: null,
-      conheight:{
-      height:'640'+'px'
-      }
+      conheight: {
+        height: "640" + "px"
+      },
+      pickerOptions: {
+        shortcuts: [
+          {
+            text: "最近一周",
+            onClick(picker) {
+              const end = new Date();
+              const start = new Date();
+              start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit("pick", [start, end]);
+            }
+          },
+          {
+            text: "最近一个月",
+            onClick(picker) {
+              const end = new Date();
+              const start = new Date();
+              start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);
+              picker.$emit("pick", [start, end]);
+            }
+          },
+          {
+            text: "最近三个月",
+            onClick(picker) {
+              const end = new Date();
+              const start = new Date();
+              start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);
+              picker.$emit("pick", [start, end]);
+            }
+          }
+        ]
+      },
+      value1: "",
+      value2: ""
     };
   },
   mounted() {
     this.getData();
     this.timer = setInterval(() => {
-    this.gotoPage(this.nextIndex);
-    }, 3500)
+      this.gotoPage(this.nextIndex);
+    }, 3500);
   },
-   
+
   beforeDestroy() {
     clearInterval(this.timer);
   },
   methods: {
+    getItem(index) {
+      this.currentSort = index;
+    },
     getData() {
       this.$axios.get("../../static/Aside.json").then(
         response => {
@@ -199,12 +320,12 @@ export default {
     gotoPage(index) {
       this.currentIndex = index;
     },
-    getHeight(){
-      this.conheight.height=window.innerHeight-270+'px';
+    getHeight() {
+      this.conheight.height = window.innerHeight - 270 + "px";
     },
-    created(){
-      window.addEventListener('resize',this.getHeight);
-      this.getHeight()
+    created() {
+      window.addEventListener("resize", this.getHeight);
+      this.getHeight();
     }
   },
   computed: {
@@ -222,8 +343,8 @@ export default {
         return this.currentIndex + 1;
       }
     }
-  },
-}
+  }
+};
 </script>
 <style scoped>
 @import url("../css/home.css");

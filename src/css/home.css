@@ -173,17 +173,96 @@ img{
     height: 36px;
     overflow: hidden;
 }
-/* .show-slider .show-image li:before {
-    width: 88px;
-    height: 78px;
-    margin: -89px 0 0 -44px;
-    background-position: -200px 0;
+.homeAll {
+    overflow: hidden;
+    height: 36px;
+  }
+  .search-wrapper {
+    height: 36px;
+    width: 474px;
+    float: left;
+  }
+  .search-input input {
+    height: 36px;
+    width: 474px;
+    padding: 0 10px 0 20px;
+    font-size: 14px;
+    line-height: 36px;
+    border: 0 none;
+    color: #666;
+    border-radius: 4px;
+    float: left;
+  }
+  .search-button {
+    margin-left: 4px;
+    float: left;
+    width: 40px;
+    height: 36px;
+  }
+  .search-button a {
+    height: 36px;
+    display: block;
+    background-color: #ff9d00;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .icon-search {
+    margin-top: 6px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/home/header-sprites13.png);
+    background-position: 0 -110px !important;
+    overflow: hidden;
+    vertical-align: top;
+  }
+  .searchbar-hotel .search-input {
+    float: left;
+    width: 210px;
+  }
+  .searchbar-hotel .el-input__inner {
+    width: 210px;
+    height: 36px;
+    border: 0 none;
+    border-radius: 4px;
+    
+  }
+  .searchbar-hotel .el-input__inner[data-v-fae5bece] {
+    width: 260px;
+    height: 36px;
+    border: 0 none;
+    border-radius: 4px;
+    margin-left: 4px;
 }
-.show-slider .show-image li:after, .show-slider .show-image li:before {
-    content: '';
+  .active i{
+    background-position: -60px -140px!important;
+  }
+  .searchbar-flight input[data-v-fae5bece] {
+    width: 130px;
+}
+.searchbar-flight input{
+    width: 130px;
+}
+.flight-end{
+    position: relative;
+}
+.search-input-exchange{
+    width: 26px;
+    padding-top: 5px;
+    margin-left: -18px;
     position: absolute;
-    z-index: -1;
-    left: 50%;
-    top: 50%;
-    background: url(/images/common/loading-big.png) no-repeat;
-} */
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.searchbar-flight .search-input{
+    float: left;
+}
+.searchbar-flight .flight-start{
+    width: 170px;
+}
+.flight-date{
+   width: 130px;
+    margin-left:9px;
+}

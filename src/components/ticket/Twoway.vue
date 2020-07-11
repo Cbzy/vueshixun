@@ -25,7 +25,8 @@ export default {
         i4:'返回日期',
         value1: '2020-07-12',
         value2: '',
-
+        in1:'',
+        in2:''
 
       }
     }

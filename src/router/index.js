@@ -25,6 +25,7 @@ import HomeTicket from '@/components/HomeTicket.vue'
 import HomeDestination from '@/components/HomeDestination.vue'
 import HomeHotel from '@/components/HomeHotel.vue'
 import HomeAll from '@/components/HomeAll.vue'
+import HomeSearch from '@/components/HomeSearch.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +34,7 @@ export default new Router({
             path: '',
             redirect: '/home'
         },
+        
         {
             path: '/home',
             components: {
@@ -40,6 +42,7 @@ export default new Router({
                 HomeNav,
                 HomeAside,
                 HomeWrapper,
+                
             },
             children: [{
                 path: '',
@@ -54,7 +57,13 @@ export default new Router({
                 component: HomeNew
             },
           
+           
             ]
+        },
+        {
+            path: '/homeSearch',
+            name: 'HomeSearch',
+            component: HomeSearch
         },
         {
             path: "/ticket",
@@ -71,31 +80,8 @@ export default new Router({
             // }]
 
         },
-        {
-            path: 'homeAll',
-            component: HomeAll
-        },
-        {
-            path: 'homeHotel',
-            component: HomeHotel
-        },
-        {
-            path: 'homeDestination',
-            component: HomeDestination
-        },
-        {
-            path: 'homeTicket',
-            component: HomeTicket
-        },
-        {
-            path: 'homeJourney',
-            component: HomeJourney
-        },
-        {
-            path: '/destination',
-            name: 'Destination',
-            component: Destination
-        },
+       
+       
 
 
             // }, {

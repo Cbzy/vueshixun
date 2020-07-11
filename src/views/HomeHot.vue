@@ -66,7 +66,7 @@
 </template>
 <script>
 import axios from "axios";
-import backtop from "@/components/pagination";
+import pagination from "@/components/pagination";
 export default {
     name:'HomeHot',
     

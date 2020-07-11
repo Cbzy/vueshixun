@@ -189,23 +189,21 @@
                     主题推荐
                 </h2>
                 <ul class="bar">
-                    <li>海岛特惠</li>
-                    <li>亲子同行</li>
-                    <li>吃货聚集地</li>
+                    <li @mouseenter="enter(index1)" v-for="(item1,index1) in theme" :key="index1" item3= item1>{{item1.name}}</li>
                 </ul>
             </div>  
             <div class="bn-side">
                 <img src="https://b1-q.mafengwo.net/s9/M00/6B/86/wKgBs1byYsOAREbHAAJa5lj0Ouk15.jpeg?imageMogr2%2Fthumbnail%2F%21308x482r%2Fgravity%2FCenter%2Fcrop%2F%21308x482%2Fquality%2F100" width="154px" height="241px">
             </div>
             <ul class="item">
-               <!-- <li v-for="(item,index) in Shop" :key="index" >
-                    <div class="cap1">
+               <li v-for="(item2,index2) in item3" :key="index2" >
+                    <!-- <div class="cap1">
                         <img :src="item.img" alt="" width="238px" height="134px">
-                    </div>
-                    <div class="caption">{{item.main}}</div>
+                    </div> -->
+                    <div class="caption">{{item2.main}}</div>
 
-                        <div class="cards">￥{{item.money}}<i style="font-size:14px;font-style:normal">起</i><i style="padding-left:58px;float: right;padding-top: 8px;font-size: 12px;color: #666;font-style:normal;line-height:34px">店铺:{{item.shop}}</i></div>
-                    </li> -->
+                        <div class="cards">￥{{item2.money}}<i style="font-size:14px;font-style:normal">起</i><i style="padding-left:58px;float: right;padding-top: 8px;font-size: 12px;color: #666;font-style:normal;line-height:34px">店铺:{{item2.shop}}</i></div>
+                    </li> 
             </ul>
         </div>
     </div>
@@ -220,7 +218,10 @@ export default {
         Where:[],
         Sea:[],
         Liner:[],
-        Shop:[]
+        Shop:[],
+        active:[],
+        theme:[],
+        item3:[]
       }
     },
     mounted() {
@@ -229,9 +230,12 @@ export default {
     this.getData3();
     this.getData4();
     this.getData5();
-
+    this.getData6();
+    
   },
   methods: {
+          enter(){
+        this.active = 'color: #fff;background-color:#45bd9e;'},
     getData() {
       axios.get('../../../static/WeekHot.json').then(response => {
         this.WeekHot = response.data;
@@ -265,6 +269,13 @@ export default {
         this.Shop = response.data;
       }, response => {
         console.log("get Shop is error");
+      });
+    },
+    getData6() {
+      axios.get('../../../static/WeekHot2.json').then(response => {
+        this.theme = response.data;
+      }, response => {
+        console.log("get WeekHot2 is error");
       });
     }
 }

@@ -10,9 +10,7 @@
             </ul>
             <ul>
                 <li v-for="(item3,index3) in City" :key="index3" >
-            <div class="change-bar" v-show="index3===num" > 
-                        {{item3.city}}
-                    </div>
+            <div class="change-bar" v-show="index3===num" > </div>
                     </li>
             </ul>
 
@@ -67,7 +65,7 @@ export default {
      methods: {
          enter(index){
              this.num = index;
-             this.active = 'border-right: 2px solid #fff'
+             this.active = ''
          },
          leave(){
               this.num =false;
@@ -90,7 +88,7 @@ export default {
 </script>
 <style scoped>
     .change-bar{
-        width:736px;
+        width:740px;
         height: 476px;
         position: relative;
         background:#fff;
@@ -99,7 +97,7 @@ export default {
         border-right: 2px solid #ff9d00;
         border-bottom: 2px solid #ff9d00;
         border-top: 2px solid #ff9d00;
-        border-left: 2px solid #ff9d00;
+
         overflow: hidden;
         z-index:0;
     }   
@@ -111,12 +109,13 @@ export default {
     }
     .change-title:hover{
         
-        margin-left: 2px;
-        padding-left:17px;
+        /* margin-left: 2px;
+        padding-left:17px; */
         transition: all .2s;
         width:248px;
         border-bottom: 2px solid #ff9d00;
         border-top: 2px solid #ff9d00;  
+        border-right: 2px solid #ff9d00;
         
     }
     .change-title a:hover{
@@ -130,8 +129,8 @@ export default {
         width:246px;
         height: 56px;
         border-bottom: 1px solid #f1f1f1;
-        border-right: 2px solid #ff9d00;
-        z-index:3; 
+         border-right: 2px solid #ff9d00; 
+
         
     }
     .logo3{
@@ -214,6 +213,7 @@ export default {
         border-bottom: 2px solid #ff9d00;
         background-color: #fff;
         float: left;
+
     }
     .ban{
         

@@ -426,7 +426,7 @@ div.row-hot div.r-content{
 	}
 	div.r-content dd{
 		width: 23.125rem;
-		white-space: inherit;
+		/* white-space: inherit; */
 		text-align: left;
 	}
 	div.r-content dd a{

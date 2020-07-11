@@ -39,8 +39,8 @@
           </span>
         </div>
       </div>
-      <div class="m-title"><span class="ticket-icon"></span><span>特价机票</span></div>
-      <Sale></Sale>
+      <!-- <div class="m-title"><span class="ticket-icon"></span><span>特价机票</span></div>
+      <Sale></Sale> -->
     </div>
 </template>
 <script>
@@ -98,7 +98,7 @@ export default {
   .main{
     /* border: 1px solid red; */
     width: 960px;
-    height: 800px;
+    height: 460px;
     margin: 0 auto;
   }
   .top{

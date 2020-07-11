@@ -54,12 +54,12 @@
             <div class="tab-theme">
                 <div class="themeList clearfix _j_tab_trigger" v-for="(item,Id) in stayList" :key="Id">
                   <!-- <a href="" :class="{on:Id==hotMouseOn}" v-on:mouseenter="stayChangActive(Id)">{{item.title}}</a> -->
-                    <a href="" :class="{on :isOn}" @click.native="on">{{item.title}}</a>
-                    <a href=""  :class="{on :!isOn}" @click.native="on">童话小镇</a>
-                    <a href="" :class="{on :!isOn}" @click.native="on">吃货根据地</a>
-                    <a href=""  :class="{on :!isOn}" @click.native="on">目的地特色</a>
-                    <a href=""  :class="{on :!isOn}" @click.native="on">潜水圣地</a>
-                    <a href=""  :class="{on :!isOn}" @click.native="on">周末好去处</a>
+                    <a href="" :class="{on :isOn}" @click="on">{{item.title}}</a>
+                    <a href=""  :class="{on :!isOn}" @click="on">童话小镇</a>
+                    <a href="" :class="{on :!isOn}" @click="on">吃货根据地</a>
+                    <a href=""  :class="{on :!isOn}" @click="on">目的地特色</a>
+                    <a href=""  :class="{on :!isOn}" @click="on">潜水圣地</a>
+                    <a href=""  :class="{on :!isOn}" @click="on">周末好去处</a>
                 </div>
                 <div class="_j_tab_content">
                     <ul class="clearfix" style="display: block;" v-for="item in stayList" :key="item.Id">
@@ -145,6 +145,9 @@ export default {
     this.getData();
   },
   methods:{
+    on:function(){
+
+    },
     getData() {
       axios.get('../../static/Stay.json').then(response => {
         this.stayList = response.data;
